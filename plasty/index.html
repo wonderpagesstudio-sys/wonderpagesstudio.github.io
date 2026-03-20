@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PLASTY — la bottiglia che sognava il riciclo</title>
+  <meta name="description" content="Plasty è una piccola bottiglia con un grande sogno. Un'eco-avventura per bambini 4-8 anni disponibile su Amazon."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --ocean-deep: #0a4d6e;
+      --ocean-mid: #1a7fa0;
+      --ocean-light: #4db8d4;
+      --ocean-pale: #e0f4fa;
+      --sea-green: #2dbb8f;
+      --sea-green-lt: #a8edd8;
+      --sand: #fff8ee;
+      --sand-warm: #fdecd0;
+      --sun: #f9c846;
+      --text-dark: #0d3347;
+      --text-mid: #2d6680;
+      --text-muted: #6a9ab0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--sand);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40vh;
+      background: linear-gradient(180deg, transparent 0%, rgba(77,184,212,0.08) 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(77,184,212,0.2);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--ocean-deep);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo span { color: var(--ocean-light); }
+
+    .nav-cta {
+      background: var(--sea-green);
+      color: white;
+      border: none;
+      border-radius: 24px;
+      padding: 10px 22px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .nav-cta:hover {
+      background: var(--ocean-mid);
+      transform: translateY(-1px);
+    }
+
+    .market-bar {
+      background: var(--ocean-deep);
+      padding: 10px 24px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .market-btn {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.7);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .market-btn.active,
+    .market-btn:hover {
+      background: var(--sun);
+      border-color: var(--sun);
+      color: var(--ocean-deep);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 64px 24px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 20px 32px;
+        gap: 32px;
+        text-align: center;
+      }
+    }
+
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sea-green);
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 4.5vw, 52px);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--ocean-deep);
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 .plasty { color: var(--ocean-light); }
+
+    .hero-tagline {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 19px;
+      color: var(--text-mid);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .hero-age {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--sea-green-lt);
+      color: var(--ocean-deep);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 28px;
+    }
+
+    .hero-book {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-book img {
+      width: 240px;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 6px 14px 14px 6px;
+      box-shadow: 8px 16px 48px rgba(10,77,110,0.25);
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--sea-green);
+      color: white;
+      border: none;
+      border-radius: 24px;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 800;
+      font-family: 'Nunito', sans-serif;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--ocean-mid);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(45,187,143,0.35);
+    }
+
+    .trust-bar {
+      background: var(--sand-warm);
+      padding: 32px 24px;
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .trust-item { text-align: center; }
+    .trust-value {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--ocean-deep);
+      display: block;
+    }
+
+    .trust-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 2px;
+      display: block;
+    }
+
+    .bundle-section {
+      background: var(--ocean-pale);
+      border-top: 2px solid rgba(77,184,212,0.2);
+      border-bottom: 2px solid rgba(77,184,212,0.2);
+      padding: 56px 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-eyebrow {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sea-green);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(22px, 3.5vw, 36px);
+      font-weight: 900;
+      color: var(--ocean-deep);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .section-title em {
+      color: var(--ocean-light);
+      font-style: normal;
+    }
+
+    .section-sub {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      color: var(--text-mid);
+      margin-bottom: 40px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bundle-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .bundle-cards { grid-template-columns: 1fr; }
+    }
+
+    .bundle-card {
+      background: white;
+      border: 1px solid rgba(77,184,212,0.2);
+      border-radius: 16px;
+      padding: 24px 18px;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .bundle-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(10,77,110,0.1);
+    }
+
+    .bundle-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(to right, var(--ocean-light), var(--sea-green));
+      border-radius: 16px 16px 0 0;
+    }
+
+    .bundle-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .bundle-card-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--ocean-deep);
+      margin-bottom: 8px;
+    }
+
+    .bundle-card-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .bundle-tag {
+      display: inline-block;
+      background: var(--sea-green-lt);
+      color: var(--ocean-deep);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .form-section {
+      padding: 56px 24px;
+      max-width: 580px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-card {
+      background: white;
+      border: 1px solid rgba(77,184,212,0.25);
+      border-radius: 20px;
+      padding: 40px 36px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 48px rgba(10,77,110,0.08);
+    }
+
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(to right, var(--ocean-light), var(--sea-green), var(--sun));
+    }
+
+    @media (max-width: 500px) {
+      .form-card { padding: 28px 20px; }
+    }
+
+    .form-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--ocean-deep);
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    .form-sub {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .form-gdpr {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 14px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .form-gdpr a {
+      color: var(--ocean-mid);
+      text-decoration: underline;
+    }
+
+    .form-guarantee {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .chapters-section {
+      background: var(--ocean-deep);
+      padding: 56px 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .chapters-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    @media (max-width: 700px) {
+      .chapters-inner { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    .chapters-eyebrow {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ocean-light);
+      margin-bottom: 10px;
+    }
+
+    .chapters-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .chapters-list {
+      list-style: none;
+      counter-reset: ch;
+    }
+
+    .chapters-list li {
+      counter-increment: ch;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.2s;
+    }
+
+    .chapters-list li:hover { color: white; }
+
+    .chapters-list li::before {
+      content: counter(ch);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--sun);
+      min-width: 20px;
+      margin-top: 2px;
+    }
+
+    .story-desc {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 20px;
+    }
+
+    .story-desc strong { color: white; }
+
+    .blockquote {
+      border-left: 3px solid var(--sun);
+      padding-left: 18px;
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: rgba(255,255,255,0.8);
+      margin: 20px 0;
+    }
+
+    .market-section {
+      padding: 56px 24px;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .market-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .market-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 600px) {
+      .market-cards { grid-template-columns: 1fr; }
+    }
+
+    .market-card {
+      background: white;
+      border: 1px solid rgba(77,184,212,0.2);
+      border-radius: 14px;
+      padding: 24px 16px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .market-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(10,77,110,0.12);
+    }
+
+    .market-flag {
+      font-size: 32px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .market-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--ocean-deep);
+      margin-bottom: 4px;
+    }
+
+    .market-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .btn-amazon {
+      display: inline-block;
+      background: #ff9900;
+      color: #111;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      font-family: 'Nunito', sans-serif;
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-amazon:hover {
+      background: #ffa724;
+      transform: translateY(-1px);
+    }
+
+    footer {
+      background: var(--ocean-deep);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      position: relative;
+      z-index: 1;
+    }
+
+    footer a { color: rgba(255,255,255,0.7); text-decoration: underline; }
+    footer strong { color: white; font-weight: 800; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up { animation: fadeUp 0.7s ease forwards; }
+    .d1 { animation-delay: 0.1s; opacity: 0; }
+    .d2 { animation-delay: 0.25s; opacity: 0; }
+    .d3 { animation-delay: 0.4s; opacity: 0; }
+
+    .market-content { display: none; }
+    .market-content.active { display: block; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="#">PLASTY<span>.</span></a>
+    <a class="nav-cta" href="#form-section">Regalo gratuito 🎁</a>
+  </nav>
+
+  <div class="market-bar">
+    <button class="market-btn active" onclick="setMarket('it')">🇮🇹 Italia</button>
+    <button class="market-btn" onclick="setMarket('uk')">🇬🇧 United Kingdom</button>
+    <button class="market-btn" onclick="setMarket('us')">🇺🇸 United States</button>
+  </div>
+
+  <section class="hero">
+    <div>
+      <p class="hero-eyebrow fade-up">🌊 Eco-avventura · Amicizia · Coraggio</p>
+
+      <div class="market-content active" id="hero-it">
+        <h1 class="fade-up d1"><span class="plasty">PLASTY</span><br/>la bottiglia che<br/>sognava il riciclo</h1>
+        <p class="hero-tagline fade-up d2">Perché ogni fine può diventare un nuovo inizio, se impariamo a prenderci cura del nostro mondo.</p>
+      </div>
+
+      <div class="market-content" id="hero-uk">
+        <h1 class="fade-up d1"><span class="plasty">PLASTY</span><br/>the bottle who<br/>dreamed of a new life</h1>
+        <p class="hero-tagline fade-up d2">Because every ending can become a new beginning if we choose to take care of our world.</p>
+      </div>
+
+      <div class="market-content" id="hero-us">
+        <h1 class="fade-up d1"><span class="plasty">PLASTY</span><br/>the bottle who dreamed<br/>of being recycled</h1>
+        <p class="hero-tagline fade-up d2">A heartfelt eco adventure about friendship, courage and second chances.</p>
+      </div>
+
+      <div class="hero-age fade-up d2">🐬 Consigliato 4–8 anni · Wonder Pages Studio — Eco Book Series</div>
+
+      <div class="fade-up d3">
+        <a href="#form-section" class="btn-primary">🎁 Scarica il primo capitolo gratis</a>
+      </div>
+    </div>
+
+    <div class="hero-book">
+      <img src="images/plasty-it.jpg" alt="PLASTY"/>
+    </div>
+  </section>
+
+  <div class="trust-bar">
+    <div class="trust-item">
+      <span class="trust-value">4–8</span>
+      <span class="trust-label">anni target</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-value">10</span>
+      <span class="trust-label">capitoli</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-value">3</span>
+      <span class="trust-label">edizioni</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-value">♻️</span>
+      <span class="trust-label">Eco Book Series</span>
+    </div>
+  </div>
+
+  <section class="bundle-section">
+    <div class="section-inner">
+      <p class="section-eyebrow">Regalo esclusivo gratuito</p>
+      <h2 class="section-title">Scarica il tuo <em>bundle gratuito</em></h2>
+      <p class="section-sub">Tre contenuti per far scoprire a tuo figlio il potere del rispetto per il pianeta</p>
+
+      <div class="bundle-cards">
+        <div class="bundle-card">
+          <span class="bundle-icon">📖</span>
+          <div class="bundle-card-title">Primo Capitolo</div>
+          <div class="bundle-card-desc">Plasty nasce in fabbrica e sogna di essere riciclata. Leggi come inizia la sua avventura.</div>
+          <span class="bundle-tag">PDF gratuito</span>
+        </div>
+
+        <div class="bundle-card">
+          <span class="bundle-icon">🗺️</span>
+          <div class="bundle-card-title">Mappa del Viaggio</div>
+          <div class="bundle-card-desc">La mappa illustrata di tutti i luoghi che Plasty attraversa: oceano, deserto, foresta e città.</div>
+          <span class="bundle-tag">Poster HD</span>
+        </div>
+
+        <div class="bundle-card">
+          <span class="bundle-icon">♻️</span>
+          <div class="bundle-card-title">Guida al Riciclo</div>
+          <div class="bundle-card-desc">Una mini-guida divertente per bambini su cosa si può riciclare e come farlo bene.</div>
+          <span class="bundle-tag">Attività pratica</span>
+        </div>
+      </div>
+
+      <a href="#form-section" class="btn-primary" style="background:var(--ocean-mid);">🌊 Voglio il bundle gratuito</a>
+    </div>
+  </section>
+
+  <section class="form-section" id="form-section">
+  <div style="max-width:580px; margin:0 auto; text-align:center; padding:40px 24px; overflow:hidden;">
+    <iframe width="100%" height="520" src="https://628e08d5.sibforms.com/serve/MUIFAPPGlpK_NXVnQuMMrFVLCyYKZXNlLOHhc4rJDC2yc5HB3u9vjylC-RHv75qWkpEruoJNsWic-O7aQAuQhFxQWXHJciF8xghoZ0Y_x_GrxqXPmT3k2nLAK7uQ0MyES6dHS_w_O5CGZfTszND01yI1lPi7h0sBAG8-G_Zrv7weqSTIKWPOl_Obya287k7ktKmVC33M_FwsB0pVbQ==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+  </div>
+  <p style="font-size:11px; color:var(--text-muted); max-width:540px; margin:8px auto 0; text-align:center; line-height:1.6; padding:0 24px;">
+    Inserendo i tuoi dati accetti il trattamento degli stessi da parte di Wonder Pages Studio
+    per l'invio del contenuto richiesto, in conformità al 
+    <a href="#privacy" style="color:var(--ocean-light);">Regolamento GDPR (UE) 2016/679</a>.
+    Disiscrizione gratuita in qualsiasi momento.
+  </p>
+</div>
+</section>
+
+  <section class="chapters-section">
+    <div class="chapters-inner">
+      <div>
+        <p class="chapters-eyebrow">I capitoli del libro</p>
+        <h3 class="chapters-title">Il viaggio di Plasty</h3>
+        <ul class="chapters-list">
+          <li>La nascita di Plasty</li>
+          <li>Il Vento del destino</li>
+          <li>Naufragio nell'oceano blu</li>
+          <li>L'isola dei dimenticati</li>
+          <li>Tempesta nel deserto</li>
+          <li>Nella foresta ferita</li>
+          <li>Un mondo sotto la città</li>
+          <li>Il viaggio dei 1000 rifiuti</li>
+          <li>Il ritorno (e il miracolo)</li>
+          <li>Nuova vita</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="chapters-eyebrow" style="margin-bottom:16px;">La storia</p>
+        <p class="story-desc">
+          <strong>Plasty è una piccola bottiglia con un grande sogno:</strong> essere riciclata per rinascere. Un racconto che aiuta i bambini a scoprire il valore del rispetto ambientale e il potere dei gesti quotidiani.
+        </p>
+        <p class="story-desc">
+          Quando un colpo di vento la strappa al bidone del riciclo, Plasty inizia un <strong>viaggio straordinario</strong> attraverso oceani, deserti e foreste. Lungo il cammino incontra animali, amici e ostacoli che le insegnano il coraggio, la speranza e il potere del cambiamento.
+        </p>
+        <div class="blockquote">
+          "Perché ogni fine può diventare un nuovo inizio, se impariamo a prenderci cura del nostro mondo."
+        </div>
+        <a href="https://www.amazon.it/dp/B0FWKDL4RJ" class="btn-amazon" target="_blank" id="cta-amazon-story" style="display:inline-block;margin-top:8px;">
+          📚 Acquista su Amazon
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="market-section">
+    <div class="market-inner">
+      <p class="section-eyebrow">Disponibile in 3 paesi</p>
+      <h2 class="section-title">Scegli il tuo <em>Amazon</em></h2>
+      <div class="market-cards">
+        <div class="market-card">
+          <span class="market-flag">🇮🇹</span>
+          <div class="market-name">Italia</div>
+          <div class="market-sub">Amazon.it · € 9,99</div>
+          <a href="https://www.amazon.it/dp/B0FWKDL4RJ" class="btn-amazon" target="_blank">Acquista ora</a>
+        </div>
+
+        <div class="market-card" style="border:2px solid var(--ocean-light);">
+          <div style="background:var(--ocean-pale);color:var(--ocean-deep);font-size:11px;font-weight:800;padding:3px 10px;border-radius:8px;margin-bottom:6px;display:inline-block;">Più venduto</div>
+          <span class="market-flag">🇬🇧</span>
+          <div class="market-name">United Kingdom</div>
+          <div class="market-sub">Amazon.co.uk · £ —</div>
+          <a href="https://www.amazon.co.uk/dp/B0FXWF8YJS" class="btn-amazon" target="_blank">Buy now</a>
+        </div>
+
+        <div class="market-card">
+          <span class="market-flag">🇺🇸</span>
+          <div class="market-name">United States</div>
+          <div class="market-sub">Amazon.com · $ —</div>
+          <a href="https://www.amazon.com/dp/B0FXWKBC2P" class="btn-amazon" target="_blank">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="privacy">
+    <p style="margin-bottom:8px;">
+      <strong>Wonder Pages Studio</strong> — Eco Book Series
+    </p>
+    <p>
+      © 2025 Wonder Pages Studio di Jeffry Wilson. Tutti i diritti riservati.<br/>
+      <a href="/cdn-cgi/l/email-protection#3b4c54555f5e494b5a5c5e48484f4e5f52547b5c565a525715585456"><span class="__cf_email__" data-cfemail="295e46474d4c5b59484e4c5a5a5d5c4d4046694e44484045074a4644">[email&#160;protected]</span></a>
+    </p>
+    <p style="margin-top:12px;font-size:12px;max-width:600px;margin-left:auto;margin-right:auto;">
+      <strong style="color:rgba(255,255,255,0.8);">Privacy Policy:</strong>
+      I dati personali (nome e email) raccolti tramite questo modulo sono trattati da Wonder Pages Studio
+      esclusivamente per l'invio del contenuto richiesto e comunicazioni promozionali correlate.
+      I dati non vengono ceduti a terzi. Hai diritto di accesso, rettifica e cancellazione in qualsiasi
+      momento scrivendo a <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d6a1b9b8b2b3a4a6b7b1b3a5a5a2a3b2bfb996b1bbb7bfbaf8b5b9bb">[email&#160;protected]</a> o cliccando "cancella iscrizione" nelle email ricevute.
+      Trattamento in conformità al Regolamento UE 2016/679 (GDPR).
+    </p>
+    <p style="margin-top:16px;">
+      <a href="https://www.instagram.com/wonderpagesstudio/" target="_blank">Instagram</a> ·
+      <a href="https://www.tiktok.com/@wonderpagesstudio" target="_blank">TikTok</a> ·
+      <a href="https://www.youtube.com/@WonderPagesStudio" target="_blank">YouTube</a> ·
+      <a href="https://www.facebook.com/wonderpagesstudio" target="_blank">Facebook</a>
+    </p>
+  </footer>
+
+  <script>
+    let currentMarket = 'it';
+    const amazonLinks = {
+      it: 'https://www.amazon.it/dp/B0FWKDL4RJ',
+      uk: 'https://www.amazon.co.uk/dp/B0FXWF8YJS',
+      us: 'https://www.amazon.com/dp/B0FXWKBC2P',
+    };
+
+    const amazonLabels = {
+      it: '🛒 Acquista su Amazon Italia',
+      uk: '🛒 Buy on Amazon UK',
+      us: '🛒 Buy on Amazon US',
+    };
+
+    function setMarket(market) {
+      currentMarket = market;
+
+      document.querySelectorAll('.market-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', ['it', 'uk', 'us'][i] === market);
+      });
+
+      ['it
