@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Wonder Pages Studio</title>
+<meta name="description" content="Informativa sulla privacy di Wonder Pages Studio. GDPR compliant.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --green-deep:  #1a4d2e;
+    --green-mid:   #2d7a4f;
+    --green-pale:  #b7e4c7;
+    --green-mist:  #d8f3dc;
+    --sand:        #fefae0;
+    --text-dark:   #1b2d1e;
+    --text-mid:    #3d5a45;
+    --text-soft:   #6b8f71;
+    --white:       #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--sand);
+    color: var(--text-dark);
+    line-height: 1.75;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--green-deep);
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  .site-name {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--green-pale);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  header h1 {
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-weight: 800;
+    color: var(--white);
+  }
+
+  /* ── LANG TOGGLE ── */
+  .lang-bar {
+    background: var(--green-mist);
+    padding: 12px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--green-pale);
+  }
+
+  .lang-bar button {
+    background: none;
+    border: 2px solid var(--green-mid);
+    color: var(--green-mid);
+    font-family: 'Nunito', sans-serif;
+    font-size: .85rem;
+    font-weight: 700;
+    padding: 6px 20px;
+    border-radius: 99px;
+    cursor: pointer;
+    margin: 0 6px;
+    transition: background .2s, color .2s;
+  }
+
+  .lang-bar button.active,
+  .lang-bar button:hover {
+    background: var(--green-mid);
+    color: var(--white);
+  }
+
+  /* ── CONTENT ── */
+  .content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .lang-section { display: none; }
+  .lang-section.visible { display: block; }
+
+  .updated {
+    display: inline-block;
+    background: var(--green-mist);
+    color: var(--text-soft);
+    font-size: .78rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 99px;
+    margin-bottom: 36px;
+  }
+
+  h2 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--green-deep);
+    margin: 36px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--green-mist);
+  }
+
+  h2:first-of-type { margin-top: 0; }
+
+  p { margin-bottom: 12px; font-size: .97rem; color: var(--text-mid); }
+
+  ul {
+    margin: 8px 0 16px 20px;
+    font-size: .97rem;
+    color: var(--text-mid);
+  }
+
+  ul li { margin-bottom: 6px; }
+
+  a { color: var(--green-mid); }
+
+  strong { color: var(--text-dark); }
+
+  .highlight-box {
+    background: var(--white);
+    border-left: 4px solid var(--green-mid);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: .92rem;
+    color: var(--text-mid);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--text-dark);
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: .78rem;
+    color: rgba(255,255,255,.35);
+    margin: 0;
+  }
+
+  footer a { color: var(--green-pale); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="site-name" href="https://www.wonderpagesstudio.com">Wonder Pages Studio</a>
+  <h1>Privacy Policy</h1>
+</header>
+
+<div class="lang-bar">
+  <button class="active" onclick="setLang('it', this)">🇮🇹 Italiano</button>
+  <button onclick="setLang('en', this)">🇬🇧 English</button>
+</div>
+
+<div class="content">
+
+  <!-- ══════════════════════════════════════
+       ITALIANO
+  ══════════════════════════════════════ -->
+  <div id="lang-it" class="lang-section visible">
+
+    <span class="updated">Aggiornata il 27 marzo 2025</span>
+
+    <h2>1. Titolare del trattamento</h2>
+    <p>
+      <strong>Wonder Pages Studio</strong>
+      Email: <a href="mailto:wonderpagesstudio@gmail.com">wonderpagesstudio@gmail.com</a><br>
+      Sito web: <a href="https://www.wonderpagesstudio.com">www.wonderpagesstudio.com</a>
+    </p>
+
+    <h2>2. Quali dati raccogliamo</h2>
+    <p>Attraverso i moduli presenti sulle nostre landing page raccogliamo esclusivamente:</p>
+    <ul>
+      <li><strong>Nome</strong> (facoltativo, per personalizzare le comunicazioni)</li>
+      <li><strong>Indirizzo email</strong> (obbligatorio per inviare il contenuto gratuito)</li>
+    </ul>
+    <p>Non raccogliamo dati sensibili, dati di pagamento né informazioni su minori.</p>
+
+    <h2>3. Finalità e base giuridica</h2>
+    <p>I tuoi dati vengono trattati per le seguenti finalità:</p>
+    <ul>
+      <li>Invio del contenuto gratuito richiesto (base giuridica: esecuzione di un contratto / richiesta pre-contrattuale)</li>
+      <li>Invio di comunicazioni editoriali, aggiornamenti su nuovi libri e contenuti Wonder Pages Studio (base giuridica: consenso esplicito)</li>
+    </ul>
+    <div class="highlight-box">
+      Il consenso all'invio di comunicazioni editoriali è sempre facoltativo e revocabile. Non riceverai email commerciali senza averlo prestato esplicitamente.
+    </div>
+
+    <h2>4. Conservazione dei dati</h2>
+    <p>I dati sono conservati fino alla revoca del consenso da parte tua, oppure per un massimo di 24 mesi dall'ultima interazione, salvo obblighi di legge.</p>
+
+    <h2>5. Condivisione con terze parti</h2>
+    <p>I tuoi dati <strong>non vengono venduti</strong> né ceduti a terzi per finalità commerciali. Utilizziamo i seguenti servizi tecnici:</p>
+    <ul>
+      <li><strong>Brevo</strong> — piattaforma di email marketing, con server in UE. <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">Privacy policy Brevo</a></li>
+      <li><strong>GitHub Pages</strong> — hosting del sito web. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Privacy policy GitHub</a></li>
+      <li><strong>Google Drive</strong> — distribuzione dei file scaricabili. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy policy Google</a></li>
+    </ul>
+
+    <h2>6. I tuoi diritti (GDPR)</h2>
+    <p>In qualità di interessato hai diritto di:</p>
+    <ul>
+      <li>Accedere ai tuoi dati personali</li>
+      <li>Rettificarli o aggiornarli</li>
+      <li>Richiederne la cancellazione</li>
+      <li>Opporti al trattamento</li>
+      <li>Revocare il consenso in qualsiasi momento</li>
+      <li>Presentare reclamo all'autorità di controllo (Garante Privacy Italia: <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it</a>)</li>
+    </ul>
+    <p>Per esercitare i tuoi diritti scrivi a: <a href="mailto:wonderpagesstudio@gmail.com">wonderpagesstudio@gmail.com</a></p>
+
+    <h2>7. Cancellazione dalla lista email</h2>
+    <p>Puoi cancellarti in qualsiasi momento cliccando il link <strong>"Annulla iscrizione"</strong> presente in fondo a ogni email che ti inviamo. La cancellazione è immediata.</p>
+
+    <h2>8. Cookie</h2>
+    <p>Il sito utilizza esclusivamente cookie tecnici necessari al funzionamento delle pagine. Non vengono utilizzati cookie di profilazione o cookie di terze parti per scopi pubblicitari.</p>
+
+    <h2>9. Modifiche a questa informativa</h2>
+    <p>Ci riserviamo il diritto di aggiornare questa informativa. In caso di modifiche sostanziali ne daremo comunicazione via email agli iscritti. La versione più recente è sempre disponibile a questo indirizzo.</p>
+
+  </div><!-- /lang-it -->
+
+
+  <!-- ══════════════════════════════════════
+       ENGLISH
+  ══════════════════════════════════════ -->
+  <div id="lang-en" class="lang-section">
+
+    <span class="updated">Last updated: 27 March 2025</span>
+
+    <h2>1. Data Controller</h2>
+    <p>
+      <strong>Wonder Pages Studio</strong> — Jeffry Wilson<br>
+      Email: <a href="mailto:wonderpagesstudio@gmail.com">wonderpagesstudio@gmail.com</a><br>
+      Website: <a href="https://www.wonderpagesstudio.com">www.wonderpagesstudio.com</a>
+    </p>
+
+    <h2>2. Data we collect</h2>
+    <p>Through the forms on our landing pages we collect only:</p>
+    <ul>
+      <li><strong>First name</strong> (optional, to personalise communications)</li>
+      <li><strong>Email address</strong> (required to send the free content)</li>
+    </ul>
+    <p>We do not collect sensitive data, payment information, or data relating to minors.</p>
+
+    <h2>3. Purpose and legal basis</h2>
+    <p>Your data is processed for the following purposes:</p>
+    <ul>
+      <li>Delivery of the requested free content (legal basis: performance of a contract / pre-contractual request)</li>
+      <li>Sending editorial communications, updates on new books and Wonder Pages Studio content (legal basis: explicit consent)</li>
+    </ul>
+    <div class="highlight-box">
+      Consent to editorial communications is always optional and revocable. You will not receive marketing emails without having explicitly provided consent.
+    </div>
+
+    <h2>4. Data retention</h2>
+    <p>Data is retained until you withdraw consent, or for a maximum of 24 months from the last interaction, unless required by law.</p>
+
+    <h2>5. Sharing with third parties</h2>
+    <p>Your data is <strong>never sold</strong> or shared with third parties for commercial purposes. We use the following technical services:</p>
+    <ul>
+      <li><strong>Brevo (formerly Sendinblue)</strong> — email marketing platform, EU servers. <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">Brevo privacy policy</a></li>
+      <li><strong>GitHub Pages</strong> — website hosting. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub privacy policy</a></li>
+      <li><strong>Google Drive</strong> — distribution of downloadable files. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google privacy policy</a></li>
+    </ul>
+
+    <h2>6. Your rights (GDPR)</h2>
+    <p>As a data subject you have the right to:</p>
+    <ul>
+      <li>Access your personal data</li>
+      <li>Correct or update it</li>
+      <li>Request its deletion</li>
+      <li>Object to processing</li>
+      <li>Withdraw consent at any time</li>
+      <li>Lodge a complaint with a supervisory authority</li>
+    </ul>
+    <p>To exercise your rights, write to: <a href="mailto:wonderpagesstudio@gmail.com">wonderpagesstudio@gmail.com</a></p>
+
+    <h2>7. Unsubscribing</h2>
+    <p>You can unsubscribe at any time by clicking the <strong>"Unsubscribe"</strong> link at the bottom of every email we send. Removal is immediate.</p>
+
+    <h2>8. Cookies</h2>
+    <p>This website uses only technical cookies necessary for page functionality. No profiling cookies or third-party advertising cookies are used.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>We reserve the right to update this policy. In case of material changes, we will notify subscribers by email. The most recent version is always available at this URL.</p>
+
+  </div><!-- /lang-en -->
+
+</div><!-- /content -->
+
+<footer>
+  <p>© 2025 Wonder Pages Studio · <a href="https://www.wonderpagesstudio.com">www.wonderpagesstudio.com</a></p>
+</footer>
+
+<script>
+  function setLang(lang, btn) {
+    document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('visible'));
+    document.querySelectorAll('.lang-bar button').forEach(b => b.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('visible');
+    btn.classList.add('active');
+    document.documentElement.lang = lang;
+  }
+</script>
+
+</body>
+</html>
