@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quale Dio dell'Olimpo Sei? — Wonder Pages Studio</title>
+<meta name="description" content="Scopri quale divinità greca ti rappresenta. Un quiz per bambini e genitori ispirato a Il Libro che Risvegliava gli Dèi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --night:      #0a0e1a;
+    --deep:       #0f1628;
+    --navy:       #161e35;
+    --gold:       #d4a843;
+    --gold-light: #f0c865;
+    --gold-dim:   #8a6a1e;
+    --teal:       #2dd4bf;
+    --teal-dim:   #0f766e;
+    --white:      #f5f0e8;
+    --mist:       #c8c0b0;
+    --radius:     16px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Crimson Pro', Georgia, serif;
+    background: var(--night);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .stars {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;
+  }
+  .stars::before, .stars::after {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 65%, rgba(255,255,255,.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 40% 10%, rgba(255,255,255,.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 45%, rgba(255,255,255,.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 30%, rgba(255,255,255,.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 92% 60%, rgba(255,255,255,.6) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 15% 90%, rgba(212,168,67,.8) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 60% 5%, rgba(212,168,67,.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 33% 40%, rgba(255,255,255,.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 78% 15%, rgba(255,255,255,.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 48% 70%, rgba(255,255,255,.3) 0%, transparent 100%);
+    background-size: 400px 400px;
+  }
+  .stars::after {
+    background-size: 300px 300px; opacity: .6;
+    animation: twinkle 8s ease-in-out infinite alternate;
+  }
+  @keyframes twinkle { from { opacity: .4; } to { opacity: .9; } }
+
+  .container {
+    position: relative; z-index: 1;
+    max-width: 720px; margin: 0 auto; padding: 0 20px 80px;
+  }
+
+  .site-header { text-align: center; padding: 32px 0 0; }
+  .site-link {
+    font-family: 'Cinzel', serif; font-size: .72rem; font-weight: 600;
+    letter-spacing: .18em; color: var(--gold-dim); text-decoration: none;
+    text-transform: uppercase; transition: color .2s;
+  }
+  .site-link:hover { color: var(--gold); }
+
+  .intro { text-align: center; padding: 48px 0 40px; }
+  .intro-eyebrow {
+    font-family: 'Cinzel', serif; font-size: .7rem; letter-spacing: .22em;
+    color: var(--gold-dim); text-transform: uppercase; margin-bottom: 20px; display: block;
+  }
+  .intro h1 {
+    font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 6vw, 3rem);
+    font-weight: 900; line-height: 1.15; color: var(--gold-light);
+    text-shadow: 0 0 40px rgba(212,168,67,.4); margin-bottom: 20px;
+  }
+  .intro p {
+    font-size: clamp(1rem, 2.5vw, 1.15rem); color: var(--mist);
+    line-height: 1.75; max-width: 500px; margin: 0 auto 36px; font-style: italic;
+  }
+  .divider {
+    width: 80px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 36px;
+  }
+  .start-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--night); font-family: 'Cinzel', serif; font-size: .92rem;
+    font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    padding: 16px 48px; border-radius: 99px; border: none; cursor: pointer;
+    box-shadow: 0 4px 24px rgba(212,168,67,.35);
+    transition: transform .2s, box-shadow .2s; text-decoration: none;
+  }
+  .start-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(212,168,67,.5), 0 0 0 6px rgba(212,168,67,.1);
+  }
+
+  .progress-wrap { margin-bottom: 32px; display: none; }
+  .progress-wrap.visible { display: block; }
+  .progress-label {
+    font-family: 'Cinzel', serif; font-size: .68rem; letter-spacing: .15em;
+    color: var(--gold-dim); text-transform: uppercase; text-align: center; margin-bottom: 10px;
+  }
+  .progress-bar { height: 3px; background: rgba(255,255,255,.08); border-radius: 99px; overflow: hidden; }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-dim), var(--gold-light));
+    border-radius: 99px; transition: width .5s ease;
+  }
+
+  .question-card {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--deep) 100%);
+    border: 1px solid rgba(212,168,67,.2); border-radius: var(--radius);
+    padding: 40px 36px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5), inset 0 1px 0 rgba(212,168,67,.1);
+    display: none; animation: fadeUp .4s ease forwards;
+  }
+  .question-card.visible { display: block; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+  .question-icon { font-size: 2.4rem; text-align: center; display: block; margin-bottom: 20px; filter: drop-shadow(0 0 12px rgba(212,168,67,.5)); }
+  .question-text {
+    font-family: 'Cinzel', serif; font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: 600; color: var(--white); text-align: center; line-height: 1.5; margin-bottom: 32px;
+  }
+  .answers { display: flex; flex-direction: column; gap: 12px; }
+  .answer-btn {
+    background: rgba(255,255,255,.04); border: 1px solid rgba(212,168,67,.15);
+    border-radius: 12px; padding: 16px 22px; color: var(--mist);
+    font-family: 'Crimson Pro', serif; font-size: 1.05rem; line-height: 1.4;
+    cursor: pointer; text-align: left;
+    transition: background .2s, border-color .2s, color .2s, transform .15s;
+    display: flex; align-items: flex-start; gap: 14px;
+  }
+  .answer-btn:hover {
+    background: rgba(212,168,67,.1); border-color: rgba(212,168,67,.5);
+    color: var(--gold-light); transform: translateX(4px);
+  }
+  .answer-btn.selected { background: rgba(212,168,67,.18); border-color: var(--gold); color: var(--gold-light); }
+  .answer-letter {
+    font-family: 'Cinzel', serif; font-size: .75rem; font-weight: 700;
+    color: var(--gold-dim); letter-spacing: .08em; min-width: 22px; margin-top: 2px; flex-shrink: 0;
+  }
+
+  /* RESULT */
+  .result-card { display: none; text-align: center; animation: fadeUp .5s ease forwards; }
+  .result-card.visible { display: block; }
+  .result-glow {
+    font-size: 5rem; display: block; margin-bottom: 16px;
+    filter: drop-shadow(0 0 24px rgba(212,168,67,.7));
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .result-eyebrow { font-family: 'Cinzel', serif; font-size: .72rem; letter-spacing: .2em; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 12px; }
+  .result-name { font-family: 'Cinzel', serif; font-size: clamp(2rem, 7vw, 3.5rem); font-weight: 900; color: var(--gold-light); text-shadow: 0 0 60px rgba(212,168,67,.5); margin-bottom: 8px; line-height: 1.1; }
+  .result-title { font-family: 'Crimson Pro', serif; font-size: 1.1rem; color: var(--teal); font-style: italic; margin-bottom: 28px; letter-spacing: .04em; }
+  .result-divider { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 28px; }
+  .result-desc { font-size: 1.12rem; color: var(--mist); line-height: 1.8; max-width: 520px; margin: 0 auto 36px; font-style: italic; }
+  .result-trait {
+    display: inline-block; background: rgba(212,168,67,.12); border: 1px solid rgba(212,168,67,.25);
+    color: var(--gold); font-family: 'Cinzel', serif; font-size: .7rem; letter-spacing: .1em;
+    text-transform: uppercase; padding: 6px 16px; border-radius: 99px; margin: 4px;
+  }
+  .result-traits { margin-bottom: 44px; }
+  .result-book {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--deep) 100%);
+    border: 1px solid rgba(212,168,67,.25); border-radius: var(--radius);
+    padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 8px 32px rgba(0,0,0,.3);
+  }
+  .result-book > p { font-size: 1rem; color: var(--mist); line-height: 1.7; margin-bottom: 24px; }
+  .result-book > p strong { color: var(--gold-light); font-style: normal; }
+
+  /* CTA buttons */
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--night); font-family: 'Cinzel', serif; font-size: .88rem; font-weight: 700;
+    letter-spacing: .08em; text-transform: uppercase; padding: 15px 40px; border-radius: 99px;
+    text-decoration: none; box-shadow: 0 4px 24px rgba(212,168,67,.35);
+    transition: transform .2s, box-shadow .2s; border: none; cursor: pointer;
+  }
+  .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(212,168,67,.5); }
+
+  .result-actions {
+    display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 18px;
+  }
+  .btn-amazon-result {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #ff9900; color: #111; font-family: 'Cinzel', serif;
+    font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    padding: 13px 28px; border-radius: 99px; text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 4px 16px rgba(255,153,0,.3);
+  }
+  .btn-amazon-result:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,153,0,.4); }
+  .btn-share {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #25d366; color: white; font-family: 'Cinzel', serif;
+    font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    padding: 13px 28px; border-radius: 99px; text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn-share:hover { transform: translateY(-2px); }
+
+  .retry-btn {
+    display: inline-block; background: transparent; border: 1px solid rgba(212,168,67,.3);
+    color: var(--gold-dim); font-family: 'Cinzel', serif; font-size: .78rem;
+    letter-spacing: .1em; text-transform: uppercase; padding: 11px 28px;
+    border-radius: 99px; cursor: pointer; margin-top: 16px; transition: border-color .2s, color .2s;
+  }
+  .retry-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  .quiz-footer { text-align: center; padding-top: 60px; }
+  .quiz-footer p { font-family: 'Cinzel', serif; font-size: .65rem; letter-spacing: .15em; color: rgba(255,255,255,.2); text-transform: uppercase; }
+  .quiz-footer a { color: var(--gold-dim); text-decoration: none; }
+
+  @media (max-width: 480px) {
+    .question-card { padding: 28px 20px; }
+    .result-book { padding: 24px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stars"></div>
+
+<div class="container">
+  <header class="site-header">
+    <a href="https://www.wonderpagesstudio.com" class="site-link">✦ Wonder Pages Studio</a>
+  </header>
+
+  <section class="intro" id="intro">
+    <span class="intro-eyebrow">Il Libro che Risvegliava gli Dèi</span>
+    <h1>Quale Dio dell'Olimpo Sei?</h1>
+    <div class="divider"></div>
+    <p>Sei saggio come Atena, potente come Zeus, coraggioso come Eracle?<br>
+    Rispondi a 6 domande e scopri quale divinità greca ti rappresenta.</p>
+    <button class="start-btn" onclick="startQuiz()">⚡ Scopri il tuo Dio</button>
+  </section>
+
+  <div class="progress-wrap" id="progressWrap">
+    <p class="progress-label" id="progressLabel">Domanda 1 di 6</p>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div id="quizArea"></div>
+  <div class="result-card" id="resultCard"></div>
+
+  <footer class="quiz-footer">
+    <p>© 2025 Wonder Pages Studio · <a href="https://www.wonderpagesstudio.com">wonderpagesstudio.com</a></p>
+  </footer>
+</div>
+
+<script>
+const questions = [
+  {
+    icon: "⚡",
+    text: "Un amico è in difficoltà. Cosa fai per primo?",
+    answers: [
+      { text: "Cerco la soluzione più intelligente, poi agisco con calma.", god: "atena" },
+      { text: "Mi lancio in suo aiuto senza pensarci due volte.", god: "eracle" },
+      { text: "Prendo il controllo della situazione e organizzo tutti.", god: "zeus" },
+      { text: "Osservo dall'ombra e aspetto il momento giusto.", god: "medusa" },
+      { text: "Volo via a cercare aiuto nel più breve tempo possibile.", god: "pegaso" },
+    ]
+  },
+  {
+    icon: "🏛️",
+    text: "Dove ti sentiresti più a tuo agio?",
+    answers: [
+      { text: "In una grande biblioteca, tra libri e mappe.", god: "atena" },
+      { text: "In mezzo a una foresta, a superare un ostacolo.", god: "eracle" },
+      { text: "Su una vetta, con lo sguardo su tutto il mondo.", god: "zeus" },
+      { text: "In un labirinto sotterraneo, dove nessuno osa entrare.", god: "medusa" },
+      { text: "In cielo, con il vento tra le ali.", god: "pegaso" },
+    ]
+  },
+  {
+    icon: "🌩️",
+    text: "Qual è il tuo punto di forza più grande?",
+    answers: [
+      { text: "L'intelligenza — risolvo problemi che altri non vedono.", god: "atena" },
+      { text: "La forza e il coraggio — non mi arrendo mai.", god: "eracle" },
+      { text: "L'autorità — gli altri si fidano di me naturalmente.", god: "zeus" },
+      { text: "Il mistero — nessuno riesce a capirmi davvero.", god: "medusa" },
+      { text: "La libertà — sono leggero e sempre in movimento.", god: "pegaso" },
+    ]
+  },
+  {
+    icon: "📜",
+    text: "Ti consegnano un compito impossibile. Come reagisci?",
+    answers: [
+      { text: "Studo il problema da ogni angolazione fino a trovare la via.", god: "atena" },
+      { text: "Comincio subito. Le difficoltà si superano facendo.", god: "eracle" },
+      { text: "Decido chi si occuperà di ogni parte. Poi superviso.", god: "zeus" },
+      { text: "Non mi spavento — l'impossibile è solo qualcosa che non si è ancora tentato.", god: "medusa" },
+      { text: "Cerco una prospettiva diversa — dall'alto tutto sembra più chiaro.", god: "pegaso" },
+    ]
+  },
+  {
+    icon: "🌿",
+    text: "Cosa ti spaventa di più?",
+    answers: [
+      { text: "Prendere una decisione sbagliata per mancanza di informazioni.", god: "atena" },
+      { text: "Non riuscire a proteggere chi amo.", god: "eracle" },
+      { text: "Perdere il controllo di ciò che mi appartiene.", god: "zeus" },
+      { text: "Essere frainteso e giudicato per quello che sono.", god: "medusa" },
+      { text: "Essere costretto a fermarmi, a restare fermo in un posto.", god: "pegaso" },
+    ]
+  },
+  {
+    icon: "✨",
+    text: "Quale frase ti appartiene di più?",
+    answers: [
+      { text: "«La conoscenza è la vera arma più potente.»", god: "atena" },
+      { text: "«Non esiste sfida troppo grande per chi non si arrende.»", god: "eracle" },
+      { text: "«L'ordine è la base di ogni grande impresa.»", god: "zeus" },
+      { text: "«La forza vera viene dall'interno, non dall'apparenza.»", god: "medusa" },
+      { text: "«La libertà è il dono più prezioso che esista.»", god: "pegaso" },
+    ]
+  }
+];
+
+const results = {
+  atena: {
+    emoji: "🦉",
+    name: "Atena",
+    title: "Dea della Saggezza e della Strategia",
+    desc: "La tua mente è il tuo regno. Osservi, analizzi, decidi con precisione. Non ti lasci travolgere dall'emozione del momento — preferisci capire prima di agire. Come Atena, sei un punto di riferimento per chi ti sta accanto.",
+    traits: ["Saggia", "Strategica", "Precisa", "Protettrice"],
+    book: "Nel libro, Atena appare tra gli scaffali della biblioteca di Luca quando lui ne ha più bisogno. La trovi nel <strong>Capitolo 3 — La Dea tra gli scaffali</strong>."
+  },
+  eracle: {
+    emoji: "⚔️",
+    name: "Eracle",
+    title: "L'Eroe che non si Arrende",
+    desc: "Il tuo cuore è grande quanto la tua forza. Non ti tiri indietro davanti alle difficoltà — le affronti a testa alta, anche quando fa male. Come Eracle, la tua vera potenza non sta nei muscoli, ma nella determinazione.",
+    traits: ["Coraggioso", "Tenace", "Leale", "Indomabile"],
+    book: "Eracle è il più grande degli eroi — ma nel libro scoprirai che anche lui ha le sue fragilità. Lo incontri nel <strong>Capitolo 6 — L'Eroe che spaccava tutto</strong>."
+  },
+  zeus: {
+    emoji: "⚡",
+    name: "Zeus",
+    title: "Re dell'Olimpo e Signore dei Cieli",
+    desc: "Sei nato per guidare. C'è in te una naturale autorità — non hai bisogno di alzare la voce, perché gli altri capiscono da soli che puoi contare su di te. Come Zeus, porti ordine dove c'è caos.",
+    traits: ["Leader", "Deciso", "Autorevole", "Visionario"],
+    book: "Zeus non è solo potere — nel libro nasconde un segreto che cambierà tutto per Luca. Lo scopri nel <strong>Capitolo 9 — La corona d'ombra</strong>."
+  },
+  medusa: {
+    emoji: "🐍",
+    name: "Medusa",
+    title: "La Guardiana Incompresa",
+    desc: "Sei complesso, profondo, spesso frainteso. Non mostri tutto ciò che sei — e questo ti rende affascinante. Come Medusa, la tua storia è più ricca di quanto gli altri credano a prima vista.",
+    traits: ["Misterioso", "Profondo", "Intenso", "Unico"],
+    book: "Medusa non è il mostro che tutti credono. Nel libro, Luca scopre la sua vera storia. Cercala nel <strong>Capitolo 4 — Lo sguardo che pietrifica</strong>."
+  },
+  pegaso: {
+    emoji: "🐎",
+    name: "Pegaso",
+    title: "Il Cavallo Alato della Libertà",
+    desc: "Sei spirito libero. Ti senti vivo quando ti muovi, esplori, scopri cose nuove. La routine ti stringe — tu hai bisogno di cielo aperto. Come Pegaso, porti gli altri in luoghi dove non sarebbero mai arrivati da soli.",
+    traits: ["Libero", "Creativo", "Dinamico", "Ispirante"],
+    book: "Pegaso appare quando Luca ne ha meno bisogno e di più. Il volo cambia tutto. Lo trovi nel <strong>Capitolo 2 — Il primo battito d'ali</strong>."
+  }
+};
+
+let scores = { atena: 0, eracle: 0, zeus: 0, medusa: 0, pegaso: 0 };
+let currentQ = 0;
+let selectedAnswer = null;
+
+function startQuiz() {
+  document.getElementById('intro').style.display = 'none';
+  document.getElementById('progressWrap').classList.add('visible');
+  showQuestion(0);
+}
+
+function showQuestion(index) {
+  const area = document.getElementById('quizArea');
+  const q = questions[index];
+  const letters = ['A', 'B', 'C', 'D', 'E'];
+  selectedAnswer = null;
+  const shuffled = [...q.answers].sort(() => Math.random() - .5);
+  area.innerHTML = `
+    <div class="question-card visible" id="qCard">
+      <span class="question-icon">${q.icon}</span>
+      <p class="question-text">${q.text}</p>
+      <div class="answers">
+        ${shuffled.map((a, i) => `
+          <button class="answer-btn" onclick="selectAnswer(this, '${a.god}')">
+            <span class="answer-letter">${letters[i]}</span>
+            <span>${a.text}</span>
+          </button>
+        `).join('')}
+      </div>
+    </div>
+  `;
+  updateProgress(index);
+}
+
+function selectAnswer(btn, god) {
+  if (selectedAnswer !== null) return;
+  selectedAnswer = god;
+  document.querySelectorAll('.answer-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  scores[god]++;
+  setTimeout(() => {
+    currentQ++;
+    if (currentQ < questions.length) showQuestion(currentQ);
+    else showResult();
+  }, 450);
+}
+
+function updateProgress(index) {
+  const pct = Math.round((index / questions.length) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = `Domanda ${index + 1} di ${questions.length}`;
+}
+
+function showResult() {
+  document.getElementById('quizArea').innerHTML = '';
+  document.getElementById('progressWrap').style.display = 'none';
+
+  const winner = Object.entries(scores).reduce((a, b) => b[1] > a[1] ? b : a)[0];
+  const r = results[winner];
+
+  const shareText = `Sono ${r.name} — ${r.title}! Fai anche tu il quiz: https://wonderpagesstudio.com/quiz-dei`;
+  const waHref = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+
+  const card = document.getElementById('resultCard');
+  card.innerHTML = `
+    <span class="result-glow">${r.emoji}</span>
+    <p class="result-eyebrow">Il tuo Dio è</p>
+    <h2 class="result-name">${r.name}</h2>
+    <p class="result-title">${r.title}</p>
+    <div class="result-divider"></div>
+    <p class="result-desc">${r.desc}</p>
+    <div class="result-traits">
+      ${r.traits.map(t => `<span class="result-trait">${t}</span>`).join('')}
+    </div>
+    <div class="result-book">
+      <p>${r.book}<br><br>
+      Scarica gratis il <strong>Primo Capitolo + 2 storie bonus</strong> dal nostro pacchetto di benvenuto — e scopri cosa succede quando i miti prendono vita tra le pagine di una biblioteca.</p>
+      <a href="https://www.wonderpagesstudio.com/libro-dei" class="cta-btn">⚡ Scopri il libro gratuitamente</a>
+      <div class="result-actions">
+        <a href="https://www.amazon.it/dp/B0G3XPBYWF" target="_blank" rel="noopener" class="btn-amazon-result">
+          📦 Acquista su Amazon
+        </a>
+        <a href="${waHref}" target="_blank" rel="noopener" class="btn-share">
+          💬 Condividi su WhatsApp
+        </a>
+      </div>
+    </div>
+    <br>
+    <button class="retry-btn" onclick="resetQuiz()">↺ Rifai il quiz</button>
+  `;
+  card.classList.add('visible');
+  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function resetQuiz() {
+  scores = { atena: 0, eracle: 0, zeus: 0, medusa: 0, pegaso: 0 };
+  currentQ = 0;
+  selectedAnswer = null;
+  document.getElementById('resultCard').classList.remove('visible');
+  document.getElementById('resultCard').innerHTML = '';
+  document.getElementById('progressWrap').style.display = 'block';
+  showQuestion(0);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
