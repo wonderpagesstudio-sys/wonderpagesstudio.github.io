@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://wonderpagesstudio.com/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Landing pages libri -->
+  <url>
+    <loc>https://wonderpagesstudio.com/plasty/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/cerca-parole/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/word-search/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/quiz-dei/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog hub -->
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Pillar articles -->
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/libri-fantasy-educativi-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/libri-ecologia-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/mitologia-greca-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/alternative-schermo-libri-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/libri-stem-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Cluster articles — Pillar 1 -->
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/libri-fantasy-educativi-bambini/percy-jackson-vs-fantasy-italiano/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/libri-fantasy-educativi-bambini/libri-fantasy-glossario-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/libri-fantasy-educativi-bambini/libreria-collezionabile-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Cluster articles — Pillar 2 -->
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/libri-ecologia-bambini/animali-estinzione-storie-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/libri-ecologia-bambini/libri-inquinamento-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/libri-ecologia-bambini/giornata-terra-attivita-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Cluster articles — Pillar 3 -->
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/mitologia-greca-bambini/dei-greci-spiegati-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/mitologia-greca-bambini/eroi-mitologici-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/mitologia-greca-bambini/mitologia-nordica-vs-greca-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Cluster articles — Pillar 4 -->
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/alternative-schermo-libri-bambini/routine-lettura-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/alternative-schermo-libri-bambini/libri-regalo-natale-2026-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/alternative-schermo-libri-bambini/domande-dopo-lettura-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Cluster articles — Pillar 5 -->
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/libri-stem-bambini/donne-scienziate-storie-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/libri-stem-bambini/libri-sistema-solare-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/blog/libri-stem-bambini/libri-coding-bambini/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
