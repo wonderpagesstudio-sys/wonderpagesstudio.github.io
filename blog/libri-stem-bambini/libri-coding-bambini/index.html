@@ -1,1 +1,478 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avvicinarsi al Coding con i Libri: Storie di Tecnologia per Bambini | Wonder Pages Studio</title>
+  <meta name="description" content="Come avvicinare i bambini 8-12 anni al coding con i libri: le storie di tecnologia che fanno amare l'informatica prima dei corsi. Con esercizio scaricabile.">
+  <link rel="canonical" href="https://wonderpagesstudio.com/blog/libri-stem-bambini/libri-coding-bambini/">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
+  <meta property="og:title" content="Avvicinarsi al Coding con i Libri: Storie di Tecnologia per Bambini 8-12 Anni">
+  <meta property="og:description" content="I migliori libri di coding per bambini 8-12 anni: storie di tecnologia che insegnano a pensare come un programmatore senza toccare un computer.">
+  <meta property="og:url" content="https://wonderpagesstudio.com/blog/libri-stem-bambini/libri-coding-bambini/">
+  <meta property="og:type" content="article">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Avvicinarsi al Coding con i Libri: Storie di Tecnologia per Bambini",
+    "description": "Come avvicinare i bambini 8-12 anni al coding e al pensiero computazionale attraverso la narrativa, prima dei corsi di programmazione.",
+    "author": { "@type": "Organization", "name": "Wonder Pages Studio" },
+    "publisher": { "@type": "Organization", "name": "Wonder Pages Studio", "url": "https://wonderpagesstudio.com" },
+    "datePublished": "2026-04-29",
+    "dateModified": "2026-04-29",
+    "mainEntityOfPage": "https://wonderpagesstudio.com/blog/libri-stem-bambini/libri-coding-bambini/"
+  }
+  </script>
+
+  <style>
+    :root {
+      --purple: #6a1b9a;
+      --purple-light: #ab47bc;
+      --purple-bg: #f3e5f5;
+      --deep: #1a1a2e;
+      --text: #2d2d2d;
+      --muted: #666;
+      --bg: #fafaf7;
+      --white: #fff;
+      --gold: #f5c842;
+      --radius: 14px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Georgia', serif; background: var(--bg); color: var(--text); line-height: 1.75; }
+
+    nav { background: var(--deep); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .nav-logo { color: var(--gold); font-size: 1.1rem; font-weight: bold; text-decoration: none; }
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-family: sans-serif; font-size: 0.9rem; }
+    .nav-links a:hover { color: var(--gold); }
+
+    .breadcrumb { background: white; padding: 12px 24px; font-family: sans-serif; font-size: 0.82rem; color: var(--muted); border-bottom: 1px solid #eee; }
+    .breadcrumb a { color: var(--deep); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-hero {
+      background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+      border-bottom: 3px solid var(--purple-light);
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .article-tag { display: inline-block; background: var(--purple); color: white; font-family: sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; margin-bottom: 20px; }
+    .article-hero h1 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); color: var(--deep); line-height: 1.2; max-width: 800px; margin: 0 auto 16px; }
+    .article-hero .intro { font-size: 1.05rem; color: #444; max-width: 640px; margin: 0 auto 24px; }
+    .article-meta { font-family: sans-serif; font-size: 0.82rem; color: var(--muted); }
+    .audience-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+    .badge { background: white; color: var(--deep); font-family: sans-serif; font-size: 0.8rem; padding: 6px 14px; border-radius: 20px; border: 1px solid var(--purple-light); }
+
+    .article-layout { max-width: 1100px; margin: 0 auto; padding: 56px 24px 80px; display: grid; grid-template-columns: 1fr 320px; gap: 56px; align-items: start; }
+
+    article h2 { font-size: 1.45rem; color: var(--deep); margin: 40px 0 16px; line-height: 1.3; }
+    article h2:first-child { margin-top: 0; }
+    article h3 { font-size: 1.15rem; color: var(--purple); margin: 28px 0 12px; }
+    article p { margin-bottom: 18px; }
+    article ul, article ol { margin: 0 0 18px 24px; }
+    article li { margin-bottom: 8px; }
+    article strong { color: var(--deep); }
+
+    .callout { background: var(--purple-bg); border-left: 4px solid var(--purple); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 20px; margin: 24px 0; font-size: 0.97rem; }
+
+    /* Concetti coding */
+    .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .concept-card { background: white; border: 2px solid var(--purple-bg); border-radius: var(--radius); padding: 18px; }
+    .concept-card h4 { color: var(--purple); font-family: sans-serif; font-size: 0.92rem; margin-bottom: 8px; }
+    .concept-card .concept-def { font-size: 0.82rem; color: var(--muted); font-family: sans-serif; margin-bottom: 8px; font-style: italic; }
+    .concept-card p { font-size: 0.86rem; color: #555; margin: 0; }
+
+    /* Algoritmo esercizio */
+    .algo-box {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 24px 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.88rem;
+      line-height: 1.9;
+    }
+    .algo-box .algo-title { color: var(--gold); font-weight: bold; font-size: 0.9rem; margin-bottom: 12px; display: block; }
+    .algo-box .algo-comment { color: #888; }
+    .algo-box .algo-keyword { color: #ab47bc; font-weight: bold; }
+    .algo-box .algo-string { color: #81c784; }
+
+    /* Libri */
+    .book-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px; margin: 16px 0; display: flex; gap: 18px; align-items: flex-start; border-left: 5px solid var(--purple); }
+    .book-num { flex-shrink: 0; width: 38px; height: 38px; background: var(--purple); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: sans-serif; font-weight: 700; font-size: 0.9rem; }
+    .book-body h4 { color: var(--deep); font-size: 1rem; margin-bottom: 4px; }
+    .book-body .book-meta { font-family: sans-serif; font-size: 0.78rem; color: var(--muted); margin-bottom: 8px; }
+    .book-body .book-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+    .book-body .book-tag { background: var(--purple-bg); color: var(--purple); border-radius: 12px; padding: 2px 10px; font-family: sans-serif; font-size: 0.72rem; }
+    .book-body p { font-size: 0.88rem; color: #555; margin-bottom: 12px; }
+    .btn-amazon { display: inline-block; background: #ff9900; color: white; font-family: sans-serif; font-size: 0.82rem; font-weight: 700; padding: 8px 16px; border-radius: 8px; text-decoration: none; }
+    .btn-amazon:hover { background: #e68900; }
+
+    /* Steps */
+    .steps { margin: 24px 0; }
+    .step-item { display: flex; gap: 16px; margin-bottom: 18px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 34px; height: 34px; background: var(--purple); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: sans-serif; font-weight: 700; font-size: 0.85rem; }
+    .step-body strong { display: block; margin-bottom: 4px; color: var(--deep); }
+    .step-body p { margin: 0; font-size: 0.92rem; }
+
+    /* Pillar link */
+    .pillar-link { background: #e8f4fd; border: 2px solid #42a5f5; border-radius: var(--radius); padding: 20px 24px; margin: 32px 0; display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; }
+    .pillar-link:hover { background: #d0eaf8; }
+    .pillar-link-icon { font-size: 2rem; flex-shrink: 0; }
+    .pillar-link-text strong { display: block; color: var(--deep); margin-bottom: 4px; }
+    .pillar-link-text span { font-size: 0.88rem; color: var(--muted); font-family: sans-serif; }
+    .pillar-link-arrow { margin-left: auto; font-size: 1.4rem; color: #42a5f5; }
+
+    /* Lead magnet */
+    .lead-magnet { background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border: 2px solid var(--purple-light); border-radius: var(--radius); padding: 32px; text-align: center; margin: 40px 0; }
+    .lm-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .lead-magnet h3 { color: var(--deep); font-size: 1.3rem; margin-bottom: 12px; }
+    .lead-magnet p { color: #444; margin-bottom: 20px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .btn-lead { display: inline-block; background: var(--purple); color: white; font-family: sans-serif; font-weight: 700; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
+    .btn-lead:hover { background: #4a148c; }
+
+    /* Related */
+    .related { margin-top: 48px; }
+    .related h3 { font-size: 1.1rem; color: var(--deep); margin-bottom: 16px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .related-card { background: white; border: 1px solid #ede0f5; border-radius: var(--radius); padding: 18px; text-decoration: none; color: inherit; transition: box-shadow .2s; }
+    .related-card:hover { box-shadow: var(--shadow); }
+    .rc-tag { font-family: sans-serif; font-size: 0.72rem; color: var(--purple); font-weight: 700; margin-bottom: 6px; }
+    .related-card h4 { font-size: 0.9rem; color: var(--deep); line-height: 1.4; }
+
+    /* Sidebar */
+    .sidebar { position: sticky; top: 24px; }
+    .sidebar-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px; margin-bottom: 24px; }
+    .sidebar-card h4 { color: var(--deep); font-size: 0.95rem; margin-bottom: 14px; font-family: sans-serif; }
+    .toc-list { list-style: none; padding: 0; }
+    .toc-list li { border-bottom: 1px solid #ede0f5; padding: 6px 0; }
+    .toc-list li:last-child { border-bottom: none; }
+    .toc-list a { color: var(--deep); text-decoration: none; font-family: sans-serif; font-size: 0.84rem; }
+    .toc-list a:hover { color: var(--purple); }
+    .toc-num { color: var(--purple); font-weight: 700; margin-right: 4px; }
+    .sidebar-cta { background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-radius: var(--radius); padding: 24px; text-align: center; margin-bottom: 24px; }
+    .sc-icon { font-size: 2rem; margin-bottom: 8px; }
+    .sidebar-cta h4 { color: var(--deep); margin-bottom: 8px; font-family: sans-serif; font-size: 0.95rem; }
+    .sidebar-cta p { font-size: 0.82rem; color: #555; margin-bottom: 14px; font-family: sans-serif; }
+    .btn-sc { display: block; background: var(--purple); color: white; font-family: sans-serif; font-weight: 700; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; }
+
+    footer { background: var(--deep); color: rgba(255,255,255,0.7); text-align: center; padding: 40px 24px; font-family: sans-serif; font-size: 0.82rem; }
+    .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px; }
+    .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .footer-links a:hover { color: var(--gold); }
+    footer a { color: rgba(255,255,255,0.5); }
+
+    @media (max-width: 780px) {
+      .article-layout { grid-template-columns: 1fr; gap: 32px; }
+      .related-grid { grid-template-columns: 1fr; }
+      .concept-grid { grid-template-columns: 1fr; }
+      .book-card { flex-direction: column; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://wonderpagesstudio.com/" class="nav-logo">✨ Wonder Pages Studio</a>
+    <ul class="nav-links">
+      <li><a href="https://wonderpagesstudio.com/">Home</a></li>
+      <li><a href="https://wonderpagesstudio.com/blog/">Blog</a></li>
+      <li><a href="https://wonderpagesstudio.com/quiz-dei/">Quiz degli Dèi</a></li>
+      <li><a href="https://wonderpagesstudio.com/plasty/">Plasty</a></li>
+    </ul>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="https://wonderpagesstudio.com/">Home</a>
+    <span>›</span>
+    <a href="https://wonderpagesstudio.com/blog/">Blog</a>
+    <span>›</span>
+    <a href="https://wonderpagesstudio.com/blog/libri-stem-bambini/">Libri STEM bambini</a>
+    <span>›</span>
+    Libri coding bambini
+  </div>
+
+  <header class="article-hero">
+    <div class="article-tag">💻 STEM · Coding e Tecnologia</div>
+    <h1>Avvicinarsi al coding con i libri: storie di tecnologia per bambini</h1>
+    <p class="intro">Prima di imparare un linguaggio di programmazione, i bambini devono capire come pensa un programmatore. I libri giusti insegnano questo — senza toccare un computer.</p>
+    <p class="article-meta">Wonder Pages Studio · Aprile 2026 · 8 min di lettura</p>
+    <div class="audience-badges">
+      <span class="badge">💻 Coding</span>
+      <span class="badge">🧠 Pensiero computazionale</span>
+      <span class="badge">📖 8-12 anni</span>
+    </div>
+  </header>
+
+  <div class="article-layout">
+
+    <article>
+
+      <h2 id="perche">Perché leggere prima di programmare</h2>
+
+      <p>Molti genitori pensano che avvicinare i figli al coding significhi iscriverli a un corso di Scratch o comprare un kit robotico. Funziona — ma non è il punto d'ingresso più efficace per tutti i bambini. Prima del codice viene il modo di pensare che il codice richiede: scomporre un problema, identificare i passi in sequenza, trovare gli errori nella logica.</p>
+
+      <p>Questo modo di pensare si chiama <strong>pensiero computazionale</strong> — e si può imparare attraverso la narrativa, molto prima di aprire un editor di codice. I bambini che lo sviluppano tramite storie hanno un vantaggio enorme quando arrivano alla programmazione vera: non devono imparare la logica e la sintassi insieme. La logica è già lì.</p>
+
+      <div class="callout">
+        <strong>Il vantaggio concreto:</strong> I bambini che leggono storie di coding e tecnologia arrivano ai corsi di programmazione con la struttura mentale già formata. Invece di chiedersi "perché devo dire al computer ogni singolo passo?", già sanno la risposta — l'hanno vissuta attraverso i personaggi dei libri.
+      </div>
+
+      <h2 id="concetti">I concetti di coding che si imparano senza accorgersene</h2>
+
+      <div class="concept-grid">
+        <div class="concept-card">
+          <h4>🔢 Sequenza</h4>
+          <div class="concept-def">L'ordine in cui si eseguono le istruzioni conta</div>
+          <p>Ogni storia ha una sequenza narrativa — "prima X, poi Y, infine Z". I bambini imparano che cambiare l'ordine produce risultati diversi. Esatto come nel codice.</p>
+        </div>
+        <div class="concept-card">
+          <h4>🔁 Loop (ciclo)</h4>
+          <div class="concept-def">Ripetere un'azione fino a che una condizione è vera</div>
+          <p>Le storie con rituali ripetuti, cicli stagionali o strutture narrative che si ripetono insegnano intuitivamente il concetto di iterazione.</p>
+        </div>
+        <div class="concept-card">
+          <h4>↔️ Condizionale (if/else)</h4>
+          <div class="concept-def">Se accade A, fai X; altrimenti fai Y</div>
+          <p>Ogni scelta di un personaggio è un condizionale. I dilemmi morali nelle storie — "se dico la verità, perdo l'amico; se mento, perdo la fiducia" — sono if/else narrativi.</p>
+        </div>
+        <div class="concept-card">
+          <h4>🧩 Scomposizione</h4>
+          <div class="concept-def">Dividere un problema grande in pezzi più piccoli</div>
+          <p>I personaggi che risolvono problemi complessi passo dopo passo insegnano la decomposizione. Odisseo non "torna a casa" — esegue una serie di sotto-missioni consecutive.</p>
+        </div>
+        <div class="concept-card">
+          <h4>🔍 Debug (trovare l'errore)</h4>
+          <div class="concept-def">Identificare dove il piano ha smesso di funzionare</div>
+          <p>Ogni storia in cui qualcosa va storto e il protagonista deve capire perché è un esercizio di debugging. La capacità di trovare l'errore nella logica, non solo eseguire il piano.</p>
+        </div>
+        <div class="concept-card">
+          <h4>📦 Astrazione</h4>
+          <div class="concept-def">Nascondere la complessità dentro un'operazione semplice</div>
+          <p>Usare un nome per un'idea complessa — "Hermes consegna il messaggio" senza spiegare ogni passo del viaggio. I bambini usano l'astrazione naturalmente nel linguaggio quotidiano.</p>
+        </div>
+      </div>
+
+      <h2 id="algoritmo">Un algoritmo senza computer: esercizio pratico</h2>
+
+      <p>Prima di mostrare il codice vero, è utile far scrivere al bambino un "algoritmo" in linguaggio naturale. Questo è il tipo di esercizio incluso nel materiale scaricabile:</p>
+
+      <div class="algo-box">
+        <span class="algo-title">// Algoritmo: come preparare una tazza di tè</span>
+        <span class="algo-comment">// Scritto da: [nome del bambino]</span><br><br>
+        <span class="algo-keyword">INIZIO</span><br>
+        &nbsp;&nbsp;Riempi il bollitore d'acqua<br>
+        &nbsp;&nbsp;Accendi il bollitore<br>
+        &nbsp;&nbsp;<span class="algo-keyword">ASPETTA FINCHÉ</span> l'acqua bolle<br>
+        &nbsp;&nbsp;Metti la bustina di tè nella tazza<br>
+        &nbsp;&nbsp;Versa l'acqua calda nella tazza<br>
+        &nbsp;&nbsp;<span class="algo-keyword">ASPETTA</span> 3 minuti<br>
+        &nbsp;&nbsp;Togli la bustina<br>
+        &nbsp;&nbsp;<span class="algo-keyword">SE</span> vuoi lo zucchero <span class="algo-keyword">ALLORA</span> aggiungi 1 cucchiaino<br>
+        &nbsp;&nbsp;<span class="algo-comment">// Fine del programma</span><br>
+        <span class="algo-keyword">FINE</span>
+      </div>
+
+      <p>L'esercizio rivela immediatamente la differenza tra "pensiero umano" e "pensiero computazionale": un bambino che non ha mai programmato scrive "prepara il tè" — un programmatore scrive ogni singolo passo, perché il computer non sa cosa non gli viene detto esplicitamente.</p>
+
+      <h2 id="libri">Libri consigliati: storie che insegnano a pensare come un programmatore</h2>
+
+      <div class="book-card">
+        <div class="book-num">1</div>
+        <div class="book-body">
+          <h4>Hello Ruby — Linda Liukas</h4>
+          <div class="book-meta">Mondadori · Illustrato · 6-10 anni</div>
+          <div class="book-tags">
+            <span class="book-tag">Pensiero computazionale</span>
+            <span class="book-tag">Protagonista femminile</span>
+            <span class="book-tag">Illustrato</span>
+          </div>
+          <p>Il libro più amato per introdurre il coding ai bambini 6-10 anni: storia illustrata che usa avventure fantastiche per insegnare sequenze, condizionali e loop in modo del tutto narrativo. Ideale come punto d'ingresso prima di qualsiasi app o corso.</p>
+          <a href="https://www.amazon.it/s?k=hello+ruby+liukas+mondadori" target="_blank" rel="noopener" class="btn-amazon">📦 Cerca su Amazon</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-num">2</div>
+        <div class="book-body">
+          <h4>Il codice di Ada — Fiona Robinson</h4>
+          <div class="book-meta">Illustrato · Biografia narrativa · 8-12 anni</div>
+          <div class="book-tags">
+            <span class="book-tag">Ada Lovelace</span>
+            <span class="book-tag">Storia vera</span>
+            <span class="book-tag">Primo algoritmo</span>
+          </div>
+          <p>La storia di Ada Lovelace raccontata come un'avventura. Perfetto come bridge tra le storie di donne scienziate e il coding: Ada è sia una pioniera della scienza che la prima programmatrice della storia. Il libro spiega come funzionano i suoi algoritmi senza usare codice.</p>
+          <a href="https://www.amazon.it/s?k=codice+ada+lovelace+bambini" target="_blank" rel="noopener" class="btn-amazon">📦 Cerca su Amazon</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-num">3</div>
+        <div class="book-body">
+          <h4>Coding per ragazzi — Jon Woodcock</h4>
+          <div class="book-meta">DK · Illustrato visivo · 9-14 anni</div>
+          <div class="book-tags">
+            <span class="book-tag">Scratch</span>
+            <span class="book-tag">Python base</span>
+            <span class="book-tag">Progetti pratici</span>
+          </div>
+          <p>Il passaggio dalla narrativa al codice vero: introduce Scratch e Python attraverso progetti concreti (giochi, animazioni, programmi semplici). Da usare dopo aver creato la motivazione con i libri di storie — non come primo approccio al tema.</p>
+          <a href="https://www.amazon.it/s?k=coding+ragazzi+dk+woodcock" target="_blank" rel="noopener" class="btn-amazon">📦 Cerca su Amazon</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-num">4</div>
+        <div class="book-body">
+          <h4>Il Libro degli Dèi — Wonder Pages Studio</h4>
+          <div class="book-meta">Wonder Pages Studio · Paperback · 8-12 anni</div>
+          <div class="book-tags">
+            <span class="book-tag">Logica narrativa</span>
+            <span class="book-tag">Sequenza causale</span>
+            <span class="book-tag">Strategie</span>
+          </div>
+          <p>I miti greci sono pieni di strutture logiche rigorose: Odisseo pianifica ogni mossa in sequenza, Atena ragiona per condizionali ("se uso la forza, perdo; se uso l'astuzia, vinco"), Efesto costruisce oggetti seguendo processi passo-dopo-passo. La narrativa mitologica è pensiero algoritmico in forma di storia.</p>
+          <a href="https://www.amazon.it/dp/B0G3XPBYWF" target="_blank" rel="noopener sponsored" class="btn-amazon">📦 Acquista su Amazon Italia</a>
+        </div>
+      </div>
+
+      <h2 id="percorso">Il percorso consigliato: dalla storia al codice</h2>
+
+      <div class="steps">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>Narrativa (8-9 anni)</strong>
+            <p>Storie che insegnano il pensiero computazionale senza nominarlo: Hello Ruby, Il codice di Ada, miti greci con struttura logica esplicita. L'obiettivo è che il bambino interiorizzi sequenza, condizionale, loop attraverso l'identificazione con i personaggi.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Esercizi unplugged (9-10 anni)</strong>
+            <p>Attività di pensiero computazionale senza computer: scrivere algoritmi in linguaggio naturale, giocare a "sii il robot" (uno dà istruzioni, l'altro le esegue alla lettera), costruire mappe di flusso per attività quotidiane. CS Unplugged offre decine di attività gratuite.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>Scratch (10-11 anni)</strong>
+            <p>Il primo linguaggio visivo: blocchi di codice colorati che si incastrano come LEGO. Scratch.mit.edu è gratuito. A questo punto il bambino sa già cosa fa un loop e un condizionale — deve solo imparare come dirlo al computer.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <strong>Python o JavaScript (11-12 anni)</strong>
+            <p>Il primo linguaggio testuale. Python è consigliato per la leggibilità della sintassi. A questo punto la logica è già solida — il lavoro è solo tradurre il pensiero in sintassi precisa.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PILLAR LINK -->
+      <a href="https://wonderpagesstudio.com/blog/libri-stem-bambini/" class="pillar-link">
+        <div class="pillar-link-icon">🔬</div>
+        <div class="pillar-link-text">
+          <strong>Guida completa: Libri STEM per bambini 8-12 anni</strong>
+          <span>Coding, fisica, astronomia: le storie di scienza che appassionano senza essere manuali</span>
+        </div>
+        <div class="pillar-link-arrow">→</div>
+      </a>
+
+      <!-- LEAD MAGNET -->
+      <div class="lead-magnet">
+        <div class="lm-icon">💻</div>
+        <h3>Scarica l'esercizio "Crea il tuo algoritmo"</h3>
+        <p>Scheda stampabile con 3 esercizi di algoritmo unplugged per bambini 8-12 anni: dal tè alla storia preferita. Gratis con la newsletter Wonder Pages Studio.</p>
+        <a href="https://wonderpagesstudio.com/newsletter/" class="btn-lead">💻 Scarica l'esercizio →</a>
+      </div>
+
+      <!-- RELATED -->
+      <div class="related">
+        <h3>Articoli correlati</h3>
+        <div class="related-grid">
+          <a href="https://wonderpagesstudio.com/blog/libri-stem-bambini/donne-scienziate-storie-bambini/" class="related-card">
+            <div class="rc-tag">👩‍🔬 Cluster</div>
+            <h4>Marie Curie, Ada Lovelace, Rosalind Franklin: storie per bambini 8-12 anni</h4>
+          </a>
+          <a href="https://wonderpagesstudio.com/blog/libri-stem-bambini/sistema-solare-libri-bambini/" class="related-card">
+            <div class="rc-tag">🚀 Cluster</div>
+            <h4>Libri sul sistema solare per bambini: avventura e scienza insieme</h4>
+          </a>
+          <a href="https://wonderpagesstudio.com/blog/libri-stem-bambini/" class="related-card">
+            <div class="rc-tag">🔬 Pillar</div>
+            <h4>Libri STEM per bambini 8-12 anni: storie di scienza che appassionano</h4>
+          </a>
+          <a href="https://wonderpagesstudio.com/blog/libri-fantasy-educativi-bambini/libri-fantasy-glossario-bambini/" class="related-card">
+            <div class="rc-tag">🧙 Correlato</div>
+            <h4>Libri fantasy con glossario: costruire il vocabolario con la narrativa</h4>
+          </a>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-card">
+        <h4>📑 In questo articolo</h4>
+        <ul class="toc-list">
+          <li><a href="#perche"><span class="toc-num">1.</span> Perché leggere prima di programmare</a></li>
+          <li><a href="#concetti"><span class="toc-num">2.</span> I concetti coding nelle storie</a></li>
+          <li><a href="#algoritmo"><span class="toc-num">3.</span> Esercizio: scrivi un algoritmo</a></li>
+          <li><a href="#libri"><span class="toc-num">4.</span> 4 libri consigliati</a></li>
+          <li><a href="#percorso"><span class="toc-num">5.</span> Il percorso dalla storia al codice</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sc-icon">💻</div>
+        <h4>Esercizio algoritmo gratuito</h4>
+        <p>3 esercizi unplugged per bambini. Gratis con la newsletter.</p>
+        <a href="https://wonderpagesstudio.com/newsletter/" class="btn-sc">💻 Scarica gratis →</a>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>📦 Libri su Amazon</h4>
+        <ul class="toc-list">
+          <li><a href="https://www.amazon.it/dp/B0G3XPBYWF" target="_blank" rel="noopener">🔬 Il Libro degli Dèi</a></li>
+          <li><a href="https://www.amazon.it/s?k=hello+ruby+liukas" target="_blank" rel="noopener">💻 Hello Ruby</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>🗂️ Altri articoli cluster STEM</h4>
+        <ul class="toc-list">
+          <li><a href="https://wonderpagesstudio.com/blog/libri-stem-bambini/donne-scienziate-storie-bambini/">👩‍🔬 Donne scienziate</a></li>
+          <li><a href="https://wonderpagesstudio.com/blog/libri-stem-bambini/sistema-solare-libri-bambini/">🚀 Sistema solare</a></li>
+          <li><a href="https://wonderpagesstudio.com/blog/libri-stem-bambini/">🔬 Guida pillar completa</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://wonderpagesstudio.com/">Home</a>
+      <a href="https://wonderpagesstudio.com/blog/">Blog</a>
+      <a href="https://wonderpagesstudio.com/plasty/">Plasty</a>
+      <a href="https://wonderpagesstudio.com/cerca-parole/">Cerca Parole</a>
+      <a href="https://wonderpagesstudio.com/quiz-dei/">Quiz degli Dèi</a>
+    </div>
+    <p>© 2026 Wonder Pages Studio · Libri edu-fantasy per bambini 8-12 anni · <a href="https://www.amazon.it/s?k=wonder+pages+studio" target="_blank" rel="noopener">Amazon Italia</a></p>
+  </footer>
+
+</body>
+</html>
