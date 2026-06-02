@@ -109,7 +109,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://wonderpagesstudio.com/blog/libri-ecologia-bambini/giornata-terra-attivita-bambini/</loc>
+    <loc>https://wonderpagesstudio.com/blog/libri-ecologia-bambini/giornata-della-terra-attivita-bambini/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -117,7 +117,7 @@
 
   <!-- Cluster articles — Pillar 3 -->
   <url>
-    <loc>https://wonderpagesstudio.com/blog/mitologia-greca-bambini/dei-greci-spiegati-bambini/</loc>
+    <loc>https://wonderpagesstudio.com/blog/mitologia-greca-bambini/dei-greci-per-bambini/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -163,7 +163,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://wonderpagesstudio.com/blog/libri-stem-bambini/libri-sistema-solare-bambini/</loc>
+    <loc>https://wonderpagesstudio.com/blog/libri-stem-bambini/sistema-solare-libri-bambini/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -175,4 +175,18 @@
     <priority>0.6</priority>
   </url>
 
+
+  <!-- Landing pages libri — aggiunte giugno 2026 -->
+  <url>
+    <loc>https://wonderpagesstudio.com/libro-dei/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wonderpagesstudio.com/quaderno-musica/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
