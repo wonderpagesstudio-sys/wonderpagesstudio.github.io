@@ -6,9 +6,6 @@
 <title>Quaderno di Musica — Per Bambini e Adulti | Wonder Pages Studio</title>
 <meta name="description" content="Il quaderno di musica con pentagramma per bambini che imparano e adulti che compongono. Senza schermi, senza app. Solo carta e note."/>
 <link rel="canonical" href="https://wonderpagesstudio.com/quaderno-musica"/>
-<meta property="og:title" content="Quaderno di Musica | Wonder Pages Studio"/>
-<meta property="og:description" content="Per chi la musica la vive davvero — bambini e adulti. Acquista su Amazon o scopri il bundle gratuito."/>
-<meta property="og:image" content="https://wonderpagesstudio.com/quaderno-musica/og-image.jpg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Nunito:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet"/>
@@ -18,8 +15,7 @@
   --purple:#6c4fd4;--purple-lt:#9b7ff0;--purple-pale:#f0ecff;
   --yellow:#ffd447;--yellow-dk:#c99a00;
   --teal:#2dbdb6;--teal-lt:#a8f0ed;
-  --music:#e8445a;--music-lt:#f07b8a;--music-pale:#fff0f2;
-  --sand:#fffbf0;--sand-warm:#fff3d0;
+  --sand:#fffbf0;
   --text-dark:#1a1a2e;--text-mid:#4a4a7a;--text-muted:#8080b0;
   --white:#ffffff;--grid-color:rgba(108,79,212,0.07);
 }
@@ -46,24 +42,19 @@ nav{background:rgba(255,251,240,0.95);backdrop-filter:blur(8px);border-bottom:1p
 /* BOOKS GRID */
 .books-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:820px;margin:0 auto 24px;}
 @media(max-width:640px){.books-grid{grid-template-columns:1fr;max-width:360px;}}
-
 .book-card{background:white;border:1.5px solid rgba(108,79,212,0.15);border-radius:20px;padding:32px 24px 28px;text-align:center;position:relative;transition:transform 0.2s,box-shadow 0.2s;}
 .book-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(108,79,212,0.14);}
 .book-card.bambini{border-color:rgba(45,189,182,0.3);}
 .book-card.adulto{border-color:rgba(108,79,212,0.3);}
-
 .card-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--teal);color:white;font-size:11px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:4px 14px;border-radius:20px;white-space:nowrap;}
 .book-card.adulto .card-badge{background:var(--purple);}
-
 .card-img-wrap{margin:8px auto 20px;width:130px;height:auto;}
 .card-img-wrap img{width:100%;border-radius:8px 12px 12px 8px;box-shadow:4px 8px 28px rgba(108,79,212,0.2);}
-
 .card-title{font-family:'Righteous',cursive;font-size:17px;color:var(--ink);margin-bottom:6px;line-height:1.2;}
 .card-sub{font-size:13px;color:var(--text-muted);margin-bottom:18px;line-height:1.5;}
 .card-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:22px;}
 .tag{background:var(--purple-pale);color:var(--purple);font-size:11px;font-weight:700;padding:4px 10px;border-radius:12px;}
 .book-card.bambini .tag{background:var(--teal-lt);color:#1a6b68;}
-
 .btn-amazon{display:block;width:100%;padding:14px 20px;background:var(--ink);color:white;border:none;border-radius:12px;font-size:14px;font-weight:800;font-family:'Nunito',sans-serif;text-decoration:none;text-align:center;transition:background 0.2s,transform 0.15s;}
 .btn-amazon:hover{background:var(--ink-mid);transform:translateY(-1px);}
 .btn-amazon .btn-sub{display:block;font-size:11px;font-weight:600;opacity:0.65;margin-top:3px;}
@@ -89,7 +80,7 @@ nav{background:rgba(255,251,240,0.95);backdrop-filter:blur(8px);border-bottom:1p
 .feature-title{font-size:15px;font-weight:800;color:white;margin-bottom:8px;}
 .feature-desc{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.55;}
 
-/* DIFFERENZA SEZIONE */
+/* DIFFERENZA */
 .diff-section{padding:64px 24px;max-width:900px;margin:0 auto;}
 .diff-title{font-family:'Righteous',cursive;font-size:clamp(20px,3vw,30px);color:var(--ink);text-align:center;margin-bottom:36px;}
 .diff-title em{color:var(--purple);font-style:normal;}
@@ -104,29 +95,25 @@ nav{background:rgba(255,251,240,0.95);backdrop-filter:blur(8px);border-bottom:1p
 .diff-list li::before{content:'♩';color:var(--teal);font-size:14px;flex-shrink:0;margin-top:1px;}
 .diff-card.adulto-diff .diff-list li::before{color:var(--purple);}
 
-/* BUNDLE SECTION */
+/* BUNDLE */
 .bundle-section{background:linear-gradient(135deg,var(--ink) 0%,#2d1b69 100%);padding:72px 24px;}
-.bundle-inner{max-width:580px;margin:0 auto;text-align:center;}
+.bundle-inner{max-width:920px;margin:0 auto;text-align:center;}
 .bundle-eyebrow{font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--yellow);margin-bottom:12px;}
 .bundle-title{font-family:'Righteous',cursive;font-size:clamp(22px,4vw,38px);color:white;margin-bottom:12px;line-height:1.2;}
-.bundle-sub{font-family:'Lora',serif;font-size:16px;color:rgba(255,255,255,0.65);margin-bottom:36px;line-height:1.7;}
-.bundle-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:36px 32px;position:relative;overflow:hidden;}
-.bundle-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--teal),var(--yellow),var(--music));}
-.bundle-includes{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;text-align:left;}
-.bundle-item{display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(255,255,255,0.85);}
-.bundle-item-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
-.bundle-item-icon.bambini-icon{background:rgba(45,189,182,0.2);}
-.bundle-item-icon.adulto-icon{background:rgba(108,79,212,0.2);}
-.bundle-item-icon.extra-icon{background:rgba(255,212,71,0.15);}
-.bundle-item strong{color:white;}
+.bundle-sub{font-family:'Lora',serif;font-size:16px;color:rgba(255,255,255,0.65);margin-bottom:36px;line-height:1.7;max-width:600px;margin-left:auto;margin-right:auto;}
 
-/* FORM BREVO */
-.brevo-form-wrap{margin-top:8px;}
-/* ↓↓↓ INSERISCI QUI IL CODICE EMBED BREVO — sostituisci l'intero blocco .brevo-placeholder ↓↓↓ */
-.brevo-placeholder{background:rgba(255,255,255,0.05);border:1.5px dashed rgba(255,255,255,0.2);border-radius:12px;padding:24px;text-align:center;color:rgba(255,255,255,0.4);font-size:13px;}
-/* ↑↑↑ RIMUOVI .brevo-placeholder dopo aver inserito il form Brevo ↑↑↑ */
+/* 2 form affiancati */
+.bundle-forms-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:700px){.bundle-forms-grid{grid-template-columns:1fr;}}
+.bundle-form-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:24px 20px 16px;text-align:left;position:relative;overflow:hidden;}
+.bundle-form-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.bundle-form-card.bambini::before{background:var(--teal);}
+.bundle-form-card.adulto::before{background:var(--purple-lt);}
+.form-card-label{font-size:15px;font-weight:800;color:white;margin-bottom:4px;}
+.form-card-desc{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px;line-height:1.5;}
+.bundle-form-card iframe{width:100%!important;max-width:100%!important;min-height:260px;border:none;}
 
-.form-gdpr{font-size:11px;color:rgba(255,255,255,0.35);margin-top:14px;line-height:1.6;}
+.form-gdpr{font-size:11px;color:rgba(255,255,255,0.3);margin-top:20px;line-height:1.6;text-align:center;}
 .form-gdpr a{color:var(--teal);text-decoration:underline;}
 
 /* FOOTER */
@@ -153,14 +140,12 @@ footer{background:var(--ink);padding:32px 24px;text-align:center;}
   <h1>Il quaderno di musica per chi<br><em>la musica la vive davvero</em></h1>
   <p class="hero-sub">Per i bambini che imparano le prime note e per gli adulti che non smettono mai di scrivere musica. Carta, pentagramma, silenzio.</p>
 
-  <!-- BOOKS GRID -->
   <div class="books-grid" id="scegli">
 
     <!-- BAMBINI -->
     <div class="book-card bambini">
       <span class="card-badge">Bambini 5–12 anni</span>
       <div class="card-img-wrap">
-        <!-- Percorso relativo dalla posizione del file HTML nel sito -->
         <img src="images/musica-bambini.jpg" alt="Il mio primo quaderno di musica — copertina" loading="lazy"/>
       </div>
       <h2 class="card-title">Il Mio Primo Quaderno di Musica</h2>
@@ -170,8 +155,7 @@ footer{background:var(--ink);padding:32px 24px;text-align:center;}
         <span class="tag">Senza app</span>
         <span class="tag">Regalo</span>
       </div>
-      <!-- INSERISCI LINK AMAZON IT LIBRO BAMBINI -->
-      <a href="https://www.amazon.it/dp/XXXXXXXXXX" target="_blank" rel="noopener" class="btn-amazon">
+      <a href="https://www.amazon.it/dp/B0FZBRT3C9" target="_blank" rel="noopener" class="btn-amazon">
         Acquista su Amazon
         <span class="btn-sub">Disponibile in Italia →</span>
       </a>
@@ -190,14 +174,13 @@ footer{background:var(--ink);padding:32px 24px;text-align:center;}
         <span class="tag">Composizione</span>
         <span class="tag">Studio</span>
       </div>
-      <!-- INSERISCI LINK AMAZON IT LIBRO ADULTI -->
-      <a href="https://www.amazon.it/dp/YYYYYYYYYY" target="_blank" rel="noopener" class="btn-amazon">
+      <a href="https://www.amazon.it/dp/B0FZBVNY1R" target="_blank" rel="noopener" class="btn-amazon">
         Acquista su Amazon
         <span class="btn-sub">Disponibile in Italia →</span>
       </a>
     </div>
 
-  </div><!-- /books-grid -->
+  </div>
 </section>
 
 <!-- TRUST BAR -->
@@ -235,7 +218,7 @@ footer{background:var(--ink);padding:32px 24px;text-align:center;}
       <div class="feature-card">
         <span class="feature-icon">📖</span>
         <div class="feature-title">Tante pagine</div>
-        <div class="feature-desc">Spazio sufficiente per mesi di pratica, composizione o studio, senza finire le pagine troppo in fretta.</div>
+        <div class="feature-desc">Spazio sufficiente per mesi di pratica, composizione o studio senza finire le pagine troppo in fretta.</div>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🎁</span>
@@ -254,7 +237,7 @@ footer{background:var(--ink);padding:32px 24px;text-align:center;}
       <h3>🟢 Il Mio Primo Quaderno — Bambini</h3>
       <ul class="diff-list">
         <li>Pentagramma grande, facile da scrivere per i più piccoli</li>
-        <li>Layout luminoso e incoraggiante</li>
+        <li>100 pagine A4 con chiave di violino e righe larghe</li>
         <li>Perfetto dai 5 ai 12 anni</li>
         <li>Ideale per lezioni di strumento o canto</li>
         <li>Regalo di compleanno o inizio anno scolastico</li>
@@ -263,55 +246,42 @@ footer{background:var(--ink);padding:32px 24px;text-align:center;}
     <div class="diff-card adulto-diff">
       <h3>🟣 Quaderno di Musica — Adulti</h3>
       <ul class="diff-list">
+        <li>120 pagine A4 con indice e pagine numerate</li>
         <li>Pentagramma formato standard professionale</li>
-        <li>Spazio per accordi, testi e annotazioni</li>
         <li>Per compositori, insegnanti e strumentisti</li>
-        <li>Compagno di studio e composizione quotidiana</li>
+        <li>Spazio per accordi, testi e annotazioni</li>
         <li>Regalo per musicisti di qualsiasi livello</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- BUNDLE (BREVO) -->
+<!-- BUNDLE (2 FORM BREVO) -->
 <section class="bundle-section" id="bundle">
   <div class="bundle-inner">
     <p class="bundle-eyebrow">🎶 Download gratuito</p>
-    <h2 class="bundle-title">Vuoi entrambi?<br>Iscriviti e scarica il bundle</h2>
-    <p class="bundle-sub">Iscriviti alla newsletter di Wonder Pages Studio — ricevi subito via email il link per scaricare il bundle digitale gratuito. Zero attese.</p>
+    <h2 class="bundle-title">Scarica il tuo PDF gratuito</h2>
+    <p class="bundle-sub">Iscriviti alla newsletter di Wonder Pages Studio e ricevi subito via email il link per scaricare il tuo PDF — nessuna attesa.</p>
 
-    <div class="bundle-card">
-      <div class="bundle-includes">
-        <div class="bundle-item">
-          <div class="bundle-item-icon bambini-icon">🟢</div>
-          <div><strong>Bundle Bambini</strong> — contenuti digitali complementari al quaderno</div>
-        </div>
-        <div class="bundle-item">
-          <div class="bundle-item-icon adulto-icon">🟣</div>
-          <div><strong>Bundle Adulti</strong> — materiali esclusivi per musicisti e compositori</div>
-        </div>
-        <div class="bundle-item">
-          <div class="bundle-item-icon extra-icon">⭐</div>
-          <div><strong>Link di download</strong> ricevuto via email subito dopo l'iscrizione</div>
-        </div>
+    <div class="bundle-forms-grid">
+
+      <!-- FORM BAMBINI -->
+      <div class="bundle-form-card bambini">
+        <div class="form-card-label">🟢 Per i bambini</div>
+        <div class="form-card-desc">Poster delle note in musica — PDF gratuito da stampare e appendere in cameretta o vicino allo spartito</div>
+        <iframe width="540" height="305" src="https://628e08d5.sibforms.com/v2/serve/MUIFAPPbJRhal5bGdV4yMgUqLiuoUheJsWsyijgsemLUk7dB14RolpFEbfswApehoWna4sf3el18f8t2FYWMnXpSfsUas27WLAL0Y3uLhCeDBBROoWtdo2MofOBxmtRHgXOygM9bJLITK0_Z9iZ-xf2g4Bi3lw_04rFb7w7WOl8V7qgThZxdi_yz1SD24_MSc7KRbMdUbRrhW9ofAQ==" frameborder="0" scrolling="auto" allowfullscreen style="display:block;width:100%;max-width:100%;min-height:260px;border:none;"></iframe>
       </div>
 
-      <!-- ============================================================
-           INSERISCI QUI IL FORM EMBED DI BREVO
-           1. Vai su Brevo > Forms > crea o copia form esistente
-           2. Sostituisci il blocco .brevo-placeholder con il codice embed
-           3. Assicurati che il form punti alla lista corretta in Brevo
-           ============================================================ -->
-      <div class="brevo-form-wrap">
-        <div class="brevo-placeholder">
-          [ Inserire qui il codice embed del form Brevo ]<br>
-          <small>Brevo → Forms → copia embed code → incolla qui</small>
-        </div>
+      <!-- FORM ADULTI -->
+      <div class="bundle-form-card adulto">
+        <div class="form-card-label">🟣 Per adulti e musicisti</div>
+        <div class="form-card-desc">Reference card dei simboli musicali — PDF da tenere come prima pagina nel quaderno o da appendere al leggio</div>
+        <iframe width="540" height="305" src="https://628e08d5.sibforms.com/v2/serve/MUIFALostVftX3eaTDrmOiXY0YLWVbDR7MT6QouWrkZHNNi5JKPKZFDQiX9Ww0TMXDZZ3wYMLMicmrQx7YEtwRhNxYfIDsUyoioYs0vUPvqtHZprWcK2wi8q19rCGSguriVUYMEgA9jwamb6XHBBk3cTaR-m-T5VnnxBwfsPiB3ETPyPLs6Nxb2rF9gKeHdAi9DQJrCIuCmVyTEF3A==" frameborder="0" scrolling="auto" allowfullscreen style="display:block;width:100%;max-width:100%;min-height:260px;border:none;"></iframe>
       </div>
-      <!-- ============================================================ -->
 
-      <p class="form-gdpr">Iscrivendoti accetti la nostra <a href="https://wonderpagesstudio.com/privacy">Privacy Policy</a>. Niente spam, solo contenuti Wonder Pages Studio. Cancellazione in qualsiasi momento.</p>
     </div>
+
+    <p class="form-gdpr">Iscrivendoti accetti la nostra <a href="https://wonderpagesstudio.com/privacy">Privacy Policy</a>. Niente spam, solo contenuti Wonder Pages Studio. Cancellazione in qualsiasi momento.</p>
   </div>
 </section>
 
