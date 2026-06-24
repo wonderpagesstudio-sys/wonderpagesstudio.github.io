@@ -9,6 +9,14 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Pagina autore -->
+  <url>
+    <loc>https://wonderpagesstudio.com/jeffry-wilson/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Landing pages libri -->
   <url>
     <loc>https://wonderpagesstudio.com/plasty/</loc>
