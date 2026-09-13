@@ -1,0 +1,60 @@
+/* Wonder Pages Studio: componenti condivisi video + social.
+   Generati/inseriti da strumenti/sito/build_curiosita.py (hub). Classi prefissate .wps-
+   per non interferire con gli stili delle singole pagine. */
+
+.wps-video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin:18px 0;}
+.wps-video-grid.wps-cols-3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:560px){.wps-video-grid,.wps-video-grid.wps-cols-3{grid-template-columns:repeat(2,1fr);}}
+
+.wps-yt{position:relative;display:block;width:100%;aspect-ratio:9/16;max-width:100%;padding:0;border:0;border-radius:14px;overflow:hidden;background:#0d0d1a;cursor:pointer;font:inherit;text-align:left;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s,box-shadow .2s;}
+.wps-yt:hover,.wps-yt:focus-visible{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.35);}
+.wps-yt:focus-visible{outline:3px solid #d4a843;outline-offset:2px;}
+.wps-yt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.wps-yt::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.85) 100%);}
+.wps-yt-play{position:absolute;top:50%;left:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:rgba(255,0,0,.9);z-index:2;}
+.wps-yt-play::before{content:'';position:absolute;top:50%;left:54%;transform:translate(-50%,-50%);border-style:solid;border-width:10px 0 10px 17px;border-color:transparent transparent transparent #fff;}
+.wps-yt-title{position:absolute;left:10px;right:10px;bottom:10px;z-index:2;color:#fff;font-family:'Nunito',system-ui,sans-serif;font-size:13px;font-weight:700;line-height:1.3;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.wps-yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
+.wps-btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 22px;font-family:'Nunito',system-ui,sans-serif;font-size:14px;font-weight:800;text-decoration:none;transition:transform .15s,background .2s;}
+.wps-btn:hover{transform:translateY(-1px);}
+.wps-btn-gold{background:#d4a843;color:#0d0d1a;}
+.wps-btn-gold:hover{background:#f0c96a;}
+.wps-social-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+.wps-social{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:8px 15px;font-family:'Nunito',system-ui,sans-serif;font-size:13px;font-weight:700;text-decoration:none;border:1px solid rgba(212,168,67,.35);color:inherit;transition:border-color .2s,background .2s;}
+.wps-social::before{content:'';width:9px;height:9px;border-radius:50%;background:var(--wps-dot,#d4a843);}
+.wps-social:hover{border-color:#d4a843;background:rgba(212,168,67,.1);}
+.wps-s-yt{--wps-dot:#ff0033;}.wps-s-tt{--wps-dot:#25f4ee;}.wps-s-ig{--wps-dot:#e1306c;}.wps-s-fb{--wps-dot:#1877f2;}
+
+/* Banda "Seguici" prima del footer (tutte le pagine) */
+.wps-follow{background:#16162a;color:#f0eadc;padding:44px 16px;border-top:1px solid rgba(212,168,67,.15);position:relative;z-index:1;}
+.wps-follow-inner{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between;}
+.wps-follow-kicker{margin:0 0 6px;font-family:'Nunito',system-ui,sans-serif;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#2dbdb6;}
+.wps-follow-title{margin:0;font-family:'Playfair Display',Georgia,serif;font-size:clamp(20px,2.6vw,26px);font-weight:900;line-height:1.25;color:#f0eadc;}
+.wps-follow-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+.wps-follow .wps-social{color:#f0eadc;}
+
+/* Box "Guarda in 60 secondi" negli articoli (tema chiaro) */
+.wps-watch{background:#1a1a2e;color:#f0eadc;border-radius:14px;padding:26px 24px;margin:40px 0;}
+.wps-watch-kicker{margin:0 0 4px;font-family:'Nunito',system-ui,sans-serif;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#2dbdb6;}
+.wps-watch h3{margin:0 0 4px;font-size:1.25rem;line-height:1.3;color:#f5c842;}
+.wps-watch p{margin:0 0 6px;font-family:'Nunito',system-ui,sans-serif;font-size:.92rem;color:rgba(240,234,220,.8);}
+.wps-watch .wps-social{color:#f0eadc;}
+.wps-watch-foot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-top:8px;}
+.wps-watch-foot a.wps-more{font-family:'Nunito',system-ui,sans-serif;font-weight:800;font-size:.9rem;color:#f5c842;text-decoration:none;}
+.wps-watch-foot a.wps-more:hover{text-decoration:underline;}
+
+/* Sezione video in homepage (tema scuro) */
+.wps-home-videos{max-width:1200px;margin:0 auto;padding:72px 24px;text-align:center;position:relative;z-index:1;}
+.wps-home-videos .wps-eyebrow{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#2dbdb6;margin-bottom:12px;}
+.wps-home-videos h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(24px,3.5vw,40px);font-weight:900;color:#f0eadc;margin-bottom:8px;}
+.wps-home-videos h2 em{color:#d4a843;font-style:normal;}
+.wps-home-videos .wps-sub{font-family:'Lora',Georgia,serif;font-size:17px;color:#a89880;max-width:640px;margin:0 auto 28px;}
+.wps-home-videos .wps-video-grid{grid-template-columns:repeat(6,1fr);text-align:left;}
+@media(max-width:1000px){.wps-home-videos .wps-video-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.wps-home-videos .wps-video-grid{grid-template-columns:repeat(2,1fr);}}
+.wps-pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:26px 0;}
+.wps-pill{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(212,168,67,.25);border-radius:16px;padding:7px 14px;font-family:'Nunito',system-ui,sans-serif;font-size:13px;font-weight:700;color:#a89880;text-decoration:none;transition:color .2s,border-color .2s;}
+.wps-pill:hover{color:#d4a843;border-color:#d4a843;}
+.wps-home-videos .wps-social-row{justify-content:center;margin-top:18px;}
+.wps-home-videos .wps-social{color:#f0eadc;}

@@ -9,6 +9,14 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Hub curiosità video -->
+  <url>
+    <loc>https://wonderpagesstudio.com/curiosita/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Pagina autore -->
   <url>
     <loc>https://wonderpagesstudio.com/jeffry-wilson/</loc>
